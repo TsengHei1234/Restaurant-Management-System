@@ -63,6 +63,16 @@ namespace C__Group_Assignment.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cash_in_hand {
+            get {
+                object obj = ResourceManager.GetObject("Cash in hand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close_Icon {
             get {
                 object obj = ResourceManager.GetObject("Close Icon", resourceCulture);
@@ -136,6 +146,26 @@ namespace C__Group_Assignment.Properties {
         internal static System.Drawing.Bitmap minimize1_Icon {
             get {
                 object obj = ResourceManager.GetObject("minimize1 Icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Online_Banking {
+            get {
+                object obj = ResourceManager.GetObject("Online Banking", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Pay_by_Credit_Card {
+            get {
+                object obj = ResourceManager.GetObject("Pay by Credit Card", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

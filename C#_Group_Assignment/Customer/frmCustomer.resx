@@ -364,7 +364,7 @@
     <value>336, 14</value>
   </metadata>
   <metadata name="dropdownAccount.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>543, 20</value>
+    <value>499, 14</value>
   </metadata>
   <metadata name="dropdownReservation.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>173, 13</value>

@@ -43,5 +43,13 @@ namespace C__Group_Assignment
         {
             this.Close();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            frmCustomer customerForm = new frmCustomer();
+
+            customerForm.Show();
+            //this.Hide();
+        }
     }
 }

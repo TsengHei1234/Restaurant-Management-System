@@ -16,7 +16,7 @@ namespace C__Group_Assignment
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCustomer());
+            Application.Run(new frmlogin());
         }
     }
 }

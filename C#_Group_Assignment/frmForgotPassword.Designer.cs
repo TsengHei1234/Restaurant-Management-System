@@ -1,6 +1,6 @@
 ﻿namespace C__Group_Assignment
 {
-    partial class frmReservationStatus
+    partial class frmForgotPassword
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // frmReservationStatus
+            // frmForgotPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 628);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmReservationStatus";
-            this.Text = "frmReservationStatus";
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "frmForgotPassword";
+            this.Text = "a";
             this.ResumeLayout(false);
 
         }

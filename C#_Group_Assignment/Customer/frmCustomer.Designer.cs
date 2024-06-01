@@ -99,7 +99,7 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(973, 39);
+            this.pnlTop.Size = new System.Drawing.Size(1150, 39);
             this.pnlTop.TabIndex = 0;
             this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
             this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
@@ -110,7 +110,7 @@
             this.pnlControlBox.Controls.Add(this.btnExit);
             this.pnlControlBox.Controls.Add(this.btnMinimize);
             this.pnlControlBox.Controls.Add(this.btnMaximize);
-            this.pnlControlBox.Location = new System.Drawing.Point(796, -2);
+            this.pnlControlBox.Location = new System.Drawing.Point(973, -2);
             this.pnlControlBox.Name = "pnlControlBox";
             this.pnlControlBox.Size = new System.Drawing.Size(173, 41);
             this.pnlControlBox.TabIndex = 6;
@@ -207,7 +207,7 @@
             this.pnlSidebar.Location = new System.Drawing.Point(0, 39);
             this.pnlSidebar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(200, 589);
+            this.pnlSidebar.Size = new System.Drawing.Size(200, 711);
             this.pnlSidebar.TabIndex = 1;
             // 
             // pnlMenu
@@ -508,7 +508,7 @@
             this.btnAccount.ForeColor = System.Drawing.Color.White;
             this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
             this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.Location = new System.Drawing.Point(-12, -19);
+            this.btnAccount.Location = new System.Drawing.Point(-12, -18);
             this.btnAccount.Margin = new System.Windows.Forms.Padding(0);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
@@ -633,7 +633,7 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(200, 39);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(773, 589);
+            this.pnlMain.Size = new System.Drawing.Size(950, 711);
             this.pnlMain.TabIndex = 2;
             // 
             // frmCustomer
@@ -641,7 +641,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(973, 628);
+            this.ClientSize = new System.Drawing.Size(1150, 750);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlSidebar);
             this.Controls.Add(this.pnlTop);
@@ -649,6 +649,7 @@
             this.Name = "frmCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCustomer";
+            this.Load += new System.EventHandler(this.frmCustomer_Load);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             this.pnlControlBox.ResumeLayout(false);

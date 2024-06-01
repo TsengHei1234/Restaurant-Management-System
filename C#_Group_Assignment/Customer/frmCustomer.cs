@@ -2,19 +2,29 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace C__Group_Assignment
 {
     public partial class frmCustomer : Form
     {
+        private frmMenu frmMenu;
+
         public frmCustomer()
         {
             InitializeComponent();
+        }
+
+        public void getMenuForm(frmMenu frmMenu)
+        {
+            this.frmMenu = frmMenu;
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -41,7 +51,29 @@ namespace C__Group_Assignment
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Boolean checkOrders = false;
+            foreach (Control control in frmMenu.pnlOrders.Controls)
+            {
+                if (control is ucOrder)
+                {
+                    checkOrders = true;
+                    break;
+                }
+            }
+
+            if (checkOrders)
+            {
+                DialogResult leaveMenu = MessageBox.Show("Are you sure you want to leave this page? Food order progress will be lost!", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (leaveMenu == DialogResult.Yes)
+                {
+                    frmMenu.pnlOrders.Controls.Clear();
+                    this.Close();
+                }
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private Point mouseLocation;
@@ -189,45 +221,91 @@ namespace C__Group_Assignment
             f.Show();
         }
 
+        public void confirmationLoadform(object Form)
+        {
+            Boolean checkOrders = false;
+            foreach (Control control in frmMenu.pnlOrders.Controls)
+            {
+                if (control is ucOrder)
+                {
+                    checkOrders = true;
+                    break;
+                }
+            }
+
+            if (checkOrders)
+            {
+                DialogResult leaveMenu = MessageBox.Show("Are you sure you want to leave this page? Food order progress will be lost!", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (leaveMenu == DialogResult.Yes)
+                {
+                    frmMenu.pnlOrders.Controls.Clear();
+                    loadform(Form);
+                }
+            }
+            else
+            {
+                loadform(Form);
+            }
+        }
+
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            loadform(new frmMenu());
+            confirmationLoadform(new frmMenu(this));
         }
 
         private void btnViewOrder_Click(object sender, EventArgs e)
         {
-            loadform(new frmViewOrder());
+            confirmationLoadform(new frmViewOrder());
         }
 
         private void btnMakeReservation_Click(object sender, EventArgs e)
         {
-            loadform(new frmMakeReservation());
+            confirmationLoadform(new frmMakeReservation());
         }
 
         private void btnReservationStatus_Click(object sender, EventArgs e)
         {
-            loadform(new frmReservationStatus());
+            confirmationLoadform(new frmReservationStatus());
         }
 
         private void btnReservationFeedback_Click(object sender, EventArgs e)
         {
-            loadform(new frmReservationFeedback());
+            confirmationLoadform(new frmReservationFeedback());
         }
 
         private void btnMenuFeedback_Click(object sender, EventArgs e)
         {
-            loadform(new frmMenuFeedback());
+            confirmationLoadform(new frmMenuFeedback());
         }
 
         private void btnPersonalInfo_Click(object sender, EventArgs e)
         {
-            loadform(new frmPersonalInfo());
+            confirmationLoadform(new frmPersonalInfo());
         }
 
         private void btnSecurity_Click(object sender, EventArgs e)
         {
-            loadform(new frmSecurity());
+            confirmationLoadform(new frmSecurity());
         }
 
-    }   
+        private void frmCustomer_Load(object sender, EventArgs e)
+        {
+            loadform(new frmMenu(this));
+            if (this.pnlMain.Controls.Count > 0)
+                this.pnlMain.Controls.RemoveAt(0);
+
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
+
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand("select Username from customer", con);
+            SqlDataReader rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                MessageBox.Show(rd.GetString(0));
+            }
+            con.Close();
+        }
+    }  
+    
 }
