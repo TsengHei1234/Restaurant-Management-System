@@ -36,6 +36,12 @@ namespace C__Group_Assignment
             set { lblFoodPrice.Text = Convert.ToString(value); }
         }
 
+        public bool foodAvailable
+        {
+            get { return btnOrder.Visible; }
+            set { btnOrder.Visible = value; }
+        }
+
         public Image foodImage
         {
             get { return picItem.Image; }
@@ -53,7 +59,7 @@ namespace C__Group_Assignment
             {
                 var order = new ucOrder(frmMenu)
                 {
-                    orderId = foodID,
+                    orderID = foodID,
                     orderName = foodName,
                     orderCategory = foodCategory,
                     orderPrice = foodPrice,
@@ -62,6 +68,7 @@ namespace C__Group_Assignment
                 frmMenu.pnlOrders.Controls.Add(order);
             }
             frmMenu.updateTotalAmount();
+            frmMenu.LoadFoodItems(frmMenu.category);
         }
     }
 }

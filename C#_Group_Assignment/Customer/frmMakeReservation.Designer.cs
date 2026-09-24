@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMakeReservation));
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblMakeReservation = new System.Windows.Forms.Label();
             this.pnlInfo = new System.Windows.Forms.Panel();
@@ -38,16 +37,16 @@
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.lblReservationDate = new System.Windows.Forms.Label();
             this.pnlReservation = new System.Windows.Forms.Panel();
+            this.lblGraduation = new System.Windows.Forms.Label();
+            this.picGraduation = new System.Windows.Forms.PictureBox();
             this.numPeople = new System.Windows.Forms.NumericUpDown();
             this.btnComfirmReservation = new System.Windows.Forms.Button();
-            this.lblTable = new System.Windows.Forms.Label();
             this.lblParty = new System.Windows.Forms.Label();
             this.lblGathering = new System.Windows.Forms.Label();
             this.picParty = new System.Windows.Forms.PictureBox();
             this.picGathering = new System.Windows.Forms.PictureBox();
             this.picBirthday = new System.Windows.Forms.PictureBox();
             this.lblBirthday = new System.Windows.Forms.Label();
-            this.picTable = new System.Windows.Forms.PictureBox();
             this.lblChooseVenueType = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbReservationTime = new System.Windows.Forms.ComboBox();
@@ -55,11 +54,11 @@
             this.pnlTop.SuspendLayout();
             this.pnlInfo.SuspendLayout();
             this.pnlReservation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picGraduation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPeople)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picParty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGathering)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBirthday)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTable)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTop
@@ -149,16 +148,16 @@
             // 
             // pnlReservation
             // 
+            this.pnlReservation.Controls.Add(this.lblGraduation);
+            this.pnlReservation.Controls.Add(this.picGraduation);
             this.pnlReservation.Controls.Add(this.numPeople);
             this.pnlReservation.Controls.Add(this.btnComfirmReservation);
-            this.pnlReservation.Controls.Add(this.lblTable);
             this.pnlReservation.Controls.Add(this.lblParty);
             this.pnlReservation.Controls.Add(this.lblGathering);
             this.pnlReservation.Controls.Add(this.picParty);
             this.pnlReservation.Controls.Add(this.picGathering);
             this.pnlReservation.Controls.Add(this.picBirthday);
             this.pnlReservation.Controls.Add(this.lblBirthday);
-            this.pnlReservation.Controls.Add(this.picTable);
             this.pnlReservation.Controls.Add(this.lblChooseVenueType);
             this.pnlReservation.Controls.Add(this.label1);
             this.pnlReservation.Controls.Add(this.cmbReservationTime);
@@ -170,6 +169,29 @@
             this.pnlReservation.Name = "pnlReservation";
             this.pnlReservation.Size = new System.Drawing.Size(973, 528);
             this.pnlReservation.TabIndex = 9;
+            // 
+            // lblGraduation
+            // 
+            this.lblGraduation.AutoSize = true;
+            this.lblGraduation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGraduation.Location = new System.Drawing.Point(605, 205);
+            this.lblGraduation.Name = "lblGraduation";
+            this.lblGraduation.Size = new System.Drawing.Size(88, 21);
+            this.lblGraduation.TabIndex = 52;
+            this.lblGraduation.Text = "Graduation";
+            this.lblGraduation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // picGraduation
+            // 
+            this.picGraduation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picGraduation.Image = global::C__Group_Assignment.Properties.Resources.Graduation;
+            this.picGraduation.Location = new System.Drawing.Point(584, 82);
+            this.picGraduation.Name = "picGraduation";
+            this.picGraduation.Size = new System.Drawing.Size(124, 109);
+            this.picGraduation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picGraduation.TabIndex = 50;
+            this.picGraduation.TabStop = false;
+            this.picGraduation.Click += new System.EventHandler(this.picGraduation_Click);
             // 
             // numPeople
             // 
@@ -195,22 +217,11 @@
             this.btnComfirmReservation.UseVisualStyleBackColor = false;
             this.btnComfirmReservation.Click += new System.EventHandler(this.btnComfirmReservation_Click);
             // 
-            // lblTable
-            // 
-            this.lblTable.AutoSize = true;
-            this.lblTable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTable.Location = new System.Drawing.Point(94, 206);
-            this.lblTable.Name = "lblTable";
-            this.lblTable.Size = new System.Drawing.Size(45, 21);
-            this.lblTable.TabIndex = 46;
-            this.lblTable.Text = "Table";
-            this.lblTable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblParty
             // 
             this.lblParty.AutoSize = true;
             this.lblParty.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblParty.Location = new System.Drawing.Point(614, 205);
+            this.lblParty.Location = new System.Drawing.Point(447, 205);
             this.lblParty.Name = "lblParty";
             this.lblParty.Size = new System.Drawing.Size(45, 21);
             this.lblParty.TabIndex = 45;
@@ -221,7 +232,7 @@
             // 
             this.lblGathering.AutoSize = true;
             this.lblGathering.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGathering.Location = new System.Drawing.Point(421, 205);
+            this.lblGathering.Location = new System.Drawing.Point(258, 205);
             this.lblGathering.Name = "lblGathering";
             this.lblGathering.Size = new System.Drawing.Size(79, 21);
             this.lblGathering.TabIndex = 44;
@@ -231,8 +242,8 @@
             // picParty
             // 
             this.picParty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picParty.Image = ((System.Drawing.Image)(resources.GetObject("picParty.Image")));
-            this.picParty.Location = new System.Drawing.Point(573, 82);
+            this.picParty.Image = global::C__Group_Assignment.Properties.Resources.Party;
+            this.picParty.Location = new System.Drawing.Point(410, 82);
             this.picParty.Name = "picParty";
             this.picParty.Size = new System.Drawing.Size(124, 109);
             this.picParty.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -243,8 +254,8 @@
             // picGathering
             // 
             this.picGathering.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picGathering.Image = ((System.Drawing.Image)(resources.GetObject("picGathering.Image")));
-            this.picGathering.Location = new System.Drawing.Point(399, 82);
+            this.picGathering.Image = global::C__Group_Assignment.Properties.Resources.Gathering;
+            this.picGathering.Location = new System.Drawing.Point(236, 82);
             this.picGathering.Name = "picGathering";
             this.picGathering.Size = new System.Drawing.Size(124, 109);
             this.picGathering.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -255,8 +266,8 @@
             // picBirthday
             // 
             this.picBirthday.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picBirthday.Image = ((System.Drawing.Image)(resources.GetObject("picBirthday.Image")));
-            this.picBirthday.Location = new System.Drawing.Point(228, 82);
+            this.picBirthday.Image = global::C__Group_Assignment.Properties.Resources.Birthday;
+            this.picBirthday.Location = new System.Drawing.Point(65, 82);
             this.picBirthday.Name = "picBirthday";
             this.picBirthday.Size = new System.Drawing.Size(124, 109);
             this.picBirthday.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -268,24 +279,12 @@
             // 
             this.lblBirthday.AutoSize = true;
             this.lblBirthday.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBirthday.Location = new System.Drawing.Point(254, 205);
+            this.lblBirthday.Location = new System.Drawing.Point(91, 205);
             this.lblBirthday.Name = "lblBirthday";
             this.lblBirthday.Size = new System.Drawing.Size(68, 21);
             this.lblBirthday.TabIndex = 36;
             this.lblBirthday.Text = "Birthday";
             this.lblBirthday.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // picTable
-            // 
-            this.picTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picTable.Image = ((System.Drawing.Image)(resources.GetObject("picTable.Image")));
-            this.picTable.Location = new System.Drawing.Point(61, 82);
-            this.picTable.Name = "picTable";
-            this.picTable.Size = new System.Drawing.Size(124, 109);
-            this.picTable.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picTable.TabIndex = 33;
-            this.picTable.TabStop = false;
-            this.picTable.Click += new System.EventHandler(this.picTable_Click);
             // 
             // lblChooseVenueType
             // 
@@ -313,12 +312,19 @@
             this.cmbReservationTime.FormattingEnabled = true;
             this.cmbReservationTime.Items.AddRange(new object[] {
             "8:00 AM - 10:00 AM",
+            "9:00 AM - 11:00 AM",
             "10:00 AM - 12:00 PM",
+            "11:00 AM - 1:00 PM",
             "12:00 PM - 2:00 PM",
+            "1:00 PM - 3:00 PM",
             "2:00 PM - 4:00 PM",
+            "3:00 PM - 5:00 PM",
             "4:00 PM - 6:00 PM",
+            "5:00 PM - 7:00 PM",
             "6:00 PM - 8:00 PM",
+            "7:00 PM - 9:00 PM",
             "8:00 PM - 10:00 PM",
+            "9:00 PM - 11:00 PM",
             "10:00 PM - 12:00 AM"});
             this.cmbReservationTime.Location = new System.Drawing.Point(329, 295);
             this.cmbReservationTime.Name = "cmbReservationTime";
@@ -347,17 +353,18 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMakeReservation";
             this.Text = "frmMakeReservation";
+            this.Load += new System.EventHandler(this.frmMakeReservation_Load);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             this.pnlInfo.ResumeLayout(false);
             this.pnlInfo.PerformLayout();
             this.pnlReservation.ResumeLayout(false);
             this.pnlReservation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picGraduation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numPeople)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picParty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picGathering)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBirthday)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -374,18 +381,18 @@
         private System.Windows.Forms.Label lblReservationDate;
         private System.Windows.Forms.Panel pnlReservation;
         private System.Windows.Forms.Label lblReservationTime;
-        private System.Windows.Forms.ComboBox cmbReservationTime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblBirthday;
-        private System.Windows.Forms.PictureBox picTable;
         private System.Windows.Forms.Label lblChooseVenueType;
         private System.Windows.Forms.PictureBox picGathering;
         private System.Windows.Forms.PictureBox picBirthday;
         private System.Windows.Forms.PictureBox picParty;
         private System.Windows.Forms.Label lblGathering;
-        private System.Windows.Forms.Label lblTable;
         private System.Windows.Forms.Label lblParty;
         private System.Windows.Forms.Button btnComfirmReservation;
         private System.Windows.Forms.NumericUpDown numPeople;
+        private System.Windows.Forms.Label lblGraduation;
+        private System.Windows.Forms.PictureBox picGraduation;
+        private System.Windows.Forms.ComboBox cmbReservationTime;
     }
 }

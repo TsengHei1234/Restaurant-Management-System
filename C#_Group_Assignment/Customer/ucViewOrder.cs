@@ -23,6 +23,8 @@ namespace C__Group_Assignment
             set { lblOrderNo.Text = $"Order No.\n{value.ToString()}"; }
         }
 
+        public string viewOrderID { get; set; }
+
         public string viewOrderName
         {
             get { return lblOrderName.Text; }
@@ -35,16 +37,16 @@ namespace C__Group_Assignment
             set { lblAmount.Text = $"Amount: {value}"; }
         }
 
-        public string vieworderStatus
+        public string viewOrderStatus
         {
             get { return lblStatus.Text; }
             set { lblStatus.Text = value; }
         }
 
-        public string viewOrderPrice
+        public int viewOrderPrice
         {
-            get { return lblPrice.Text; }
-            set { lblPrice.Text = value; }
+            get { return Convert.ToInt32(lblPrice.Text); }
+            set { lblPrice.Text = $"{value}"; }
         }
 
         public Image viewOrderImage

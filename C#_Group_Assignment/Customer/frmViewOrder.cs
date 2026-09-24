@@ -15,28 +15,87 @@ namespace C__Group_Assignment
 {
     public partial class frmViewOrder : Form
     {
-        public frmViewOrder()
+        private frmCustomer frmCustomer;
+
+        public frmViewOrder(frmCustomer frmCustomer)
         {
             InitializeComponent();
+            this.frmCustomer = frmCustomer;
         }
 
         private void frmViewOrder_Load(object sender, EventArgs e)
         {
-            int orderNo = 1;
-            for (int i = 0; i < 10; i++)
+            lblName.Text = $"Welcome Back! \n{Customer.CustomerName}";
+
+            if (Customer.CustomerDineInMethod == "Idle")
             {
-                ucViewOrder viewOrder = new ucViewOrder()
-                {
-                    viewOrderNo = orderNo,
-                    viewOrderName = "Risotto alla Milanese",
-                    viewOrderAmount = 2,
-                    vieworderStatus = "Completed",
-                    viewOrderPrice = "20",
-                    //viewOrderImage = "0"
-                };
-                pnlViewOrder.Controls.Add(viewOrder);
-                orderNo += 1;
+                lblStatus.Text = $"Status: {Customer.CustomerDineInMethod}";
             }
+            else if (Customer.CustomerDineInMethod == "Walk-In")
+            {
+                lblStatus.Text = $"Status: {Customer.CustomerDineInMethod} | {Customer.CustomerOrderTable}";
+            }
+            else if (Customer.CustomerDineInMethod == "Reservation")
+            {
+                lblStatus.Text = $"Status: {Customer.CustomerDineInMethod} | {Customer.CustomerReservationType}";
+            }
+
+            lblTime.Text = $"Time: {Customer.CurrentDateTime.ToString()}";
+
+            LoadViewOrder();
+        }
+
+        public void LoadViewOrder()
+        {
+            try
+            {
+                Customer LoadOrderTable = new Customer();
+                DataTable OrderTable = LoadOrderTable.LoadOrder();
+
+                if (OrderTable == null || OrderTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("No order(s) found. Please proceed to menu page and order.", "No Orders Found", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                foreach (DataRow row in OrderTable.Rows)
+                {
+                    int orderNo = 1;
+                    ucViewOrder viewOrder = new ucViewOrder()
+                    {
+                        viewOrderNo = orderNo,
+                        viewOrderID = row["FoodID"].ToString(),
+                        viewOrderName = row["FoodName"].ToString(),
+                        viewOrderAmount = Convert.ToInt32(row["Quantity"]),
+                        viewOrderStatus = row["OrderDetailsStatus"].ToString(),
+                        viewOrderPrice = Convert.ToInt32(row["TotalPrice"]),
+                        viewOrderImage = GetImageFromResources(row["FoodImage"].ToString())
+                    };
+                    pnlViewOrder.Controls.Add(viewOrder);
+                    orderNo += 1;
+                }
+
+                int TotalAmount = 0;
+                foreach (Control control in pnlViewOrder.Controls)
+                {
+                    
+                    if (control is ucViewOrder order)
+                    {
+                        TotalAmount += order.viewOrderPrice;
+                    }
+                }
+                lblPrice.Text = TotalAmount.ToString();    
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private Image GetImageFromResources(string imageName)
+        {
+            return (Image)Properties.Resources.ResourceManager.GetObject(imageName);
         }
 
         bool checkoutExpand = false;
@@ -77,7 +136,7 @@ namespace C__Group_Assignment
 
             foreach (Control control in pnlViewOrder.Controls)
             {
-                if (control is ucViewOrder viewOrder && (viewOrder.vieworderStatus == "In Progress" || viewOrder.vieworderStatus == "Pending"))
+                if (control is ucViewOrder viewOrder && (viewOrder.viewOrderStatus == "In Progress" || viewOrder.viewOrderStatus == "Pending"))
                 {
                     statusOrder = false;
                     break;
@@ -159,10 +218,17 @@ namespace C__Group_Assignment
                 DialogResult confirmationOrder = MessageBox.Show($"Are you sure you want to pay by {paymentType}?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (confirmationOrder == DialogResult.Yes)
                 {
+                    Customer PaymentComplete = new Customer();
+                    PaymentComplete.CompleteOrdersTable(paymentType);
+                    if (Customer.CustomerDineInMethod == "Reservation")
+                    {
+                        PaymentComplete.UpdateReservationTable("Completed");
+                    }
+                    
                     MessageBox.Show($"Payment Completed!\nTotal Amount: {lblPrice.Text}\nPayment Method: {paymentType}");
                     paymentType = null;
                     fontRegular();
-
+                    ResetViewOrder();
                     ArrayList viewOrderRemove = new ArrayList();
                     foreach (Control control in pnlViewOrder.Controls)
                     {
@@ -184,6 +250,31 @@ namespace C__Group_Assignment
                     }
                 }
             }
+
+        }
+
+        private void ResetViewOrder()
+        {
+            frmCustomer.ResetExistingDineIn();
+            Customer.CustomerDineInMethod = "Idle";
+            Customer.CustomerOrderTable = "None";
+            Customer.ReservationID = "None";
+            Customer.CustomerReservationType = "None";
+
+            lblName.Text = $"Welcome Back! \n{Customer.CustomerName}";
+            if (Customer.CustomerDineInMethod == "Idle")
+            {
+                lblStatus.Text = $"Status: {Customer.CustomerDineInMethod}";
+            }
+            else if (Customer.CustomerDineInMethod == "Walk-In")
+            {
+                lblStatus.Text = $"Status: {Customer.CustomerDineInMethod} | {Customer.CustomerOrderTable}";
+            }
+            else if (Customer.CustomerDineInMethod == "Reservation")
+            {
+                lblStatus.Text = $"Status: {Customer.CustomerDineInMethod} | {Customer.CustomerReservationType}";
+            }
+            lblTime.Text = $"Time: {Customer.CurrentDateTime.ToString()}";
 
         }
     }

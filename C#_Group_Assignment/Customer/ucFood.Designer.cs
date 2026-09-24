@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucFood));
             this.pnlFood = new System.Windows.Forms.Panel();
             this.pnlItemPriceOrder = new System.Windows.Forms.Panel();
+            this.lblSoldOut = new System.Windows.Forms.Label();
             this.lblFoodPrice = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnOrder = new System.Windows.Forms.Button();
@@ -47,9 +48,8 @@
             this.pnlFood.Controls.Add(this.pnlItemPriceOrder);
             this.pnlFood.Controls.Add(this.picItem);
             this.pnlFood.Location = new System.Drawing.Point(0, 0);
-            this.pnlFood.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlFood.Name = "pnlFood";
-            this.pnlFood.Size = new System.Drawing.Size(285, 394);
+            this.pnlFood.Size = new System.Drawing.Size(190, 256);
             this.pnlFood.TabIndex = 1;
             // 
             // pnlItemPriceOrder
@@ -58,31 +58,40 @@
             this.pnlItemPriceOrder.Controls.Add(this.label2);
             this.pnlItemPriceOrder.Controls.Add(this.btnOrder);
             this.pnlItemPriceOrder.Controls.Add(this.lblFoodName);
+            this.pnlItemPriceOrder.Controls.Add(this.lblSoldOut);
             this.pnlItemPriceOrder.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlItemPriceOrder.Location = new System.Drawing.Point(0, 228);
-            this.pnlItemPriceOrder.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.pnlItemPriceOrder.Location = new System.Drawing.Point(0, 148);
+            this.pnlItemPriceOrder.Margin = new System.Windows.Forms.Padding(10);
             this.pnlItemPriceOrder.Name = "pnlItemPriceOrder";
-            this.pnlItemPriceOrder.Padding = new System.Windows.Forms.Padding(15, 15, 15, 15);
-            this.pnlItemPriceOrder.Size = new System.Drawing.Size(285, 166);
+            this.pnlItemPriceOrder.Padding = new System.Windows.Forms.Padding(10);
+            this.pnlItemPriceOrder.Size = new System.Drawing.Size(190, 108);
             this.pnlItemPriceOrder.TabIndex = 1;
+            // 
+            // lblSoldOut
+            // 
+            this.lblSoldOut.AutoSize = true;
+            this.lblSoldOut.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSoldOut.Location = new System.Drawing.Point(61, 76);
+            this.lblSoldOut.Name = "lblSoldOut";
+            this.lblSoldOut.Size = new System.Drawing.Size(65, 17);
+            this.lblSoldOut.TabIndex = 5;
+            this.lblSoldOut.Text = "Sold Out!";
             // 
             // lblFoodPrice
             // 
             this.lblFoodPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodPrice.Location = new System.Drawing.Point(141, 66);
-            this.lblFoodPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFoodPrice.Location = new System.Drawing.Point(94, 43);
             this.lblFoodPrice.Name = "lblFoodPrice";
-            this.lblFoodPrice.Size = new System.Drawing.Size(51, 43);
+            this.lblFoodPrice.Size = new System.Drawing.Size(34, 28);
             this.lblFoodPrice.TabIndex = 1;
             this.lblFoodPrice.Text = "20";
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(107, 66);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(71, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 43);
+            this.label2.Size = new System.Drawing.Size(42, 28);
             this.label2.TabIndex = 4;
             this.label2.Text = "RM";
             // 
@@ -92,10 +101,9 @@
             this.btnOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
             this.btnOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(202)))));
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrder.Location = new System.Drawing.Point(74, 114);
-            this.btnOrder.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnOrder.Location = new System.Drawing.Point(49, 74);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(138, 35);
+            this.btnOrder.Size = new System.Drawing.Size(92, 23);
             this.btnOrder.TabIndex = 2;
             this.btnOrder.Text = "Order";
             this.btnOrder.UseVisualStyleBackColor = false;
@@ -104,10 +112,9 @@
             // lblFoodName
             // 
             this.lblFoodName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodName.Location = new System.Drawing.Point(2, 17);
-            this.lblFoodName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFoodName.Location = new System.Drawing.Point(1, 11);
             this.lblFoodName.Name = "lblFoodName";
-            this.lblFoodName.Size = new System.Drawing.Size(283, 49);
+            this.lblFoodName.Size = new System.Drawing.Size(189, 32);
             this.lblFoodName.TabIndex = 0;
             this.lblFoodName.Text = "Food Name Food Name";
             this.lblFoodName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -116,24 +123,23 @@
             // 
             this.picItem.Image = ((System.Drawing.Image)(resources.GetObject("picItem.Image")));
             this.picItem.InitialImage = ((System.Drawing.Image)(resources.GetObject("picItem.InitialImage")));
-            this.picItem.Location = new System.Drawing.Point(38, 26);
-            this.picItem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.picItem.Location = new System.Drawing.Point(25, 17);
             this.picItem.Name = "picItem";
-            this.picItem.Size = new System.Drawing.Size(210, 192);
+            this.picItem.Size = new System.Drawing.Size(140, 125);
             this.picItem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picItem.TabIndex = 0;
             this.picItem.TabStop = false;
             // 
             // ucFood
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlFood);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ucFood";
-            this.Size = new System.Drawing.Size(285, 394);
+            this.Size = new System.Drawing.Size(190, 256);
             this.pnlFood.ResumeLayout(false);
             this.pnlItemPriceOrder.ResumeLayout(false);
+            this.pnlItemPriceOrder.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picItem)).EndInit();
             this.ResumeLayout(false);
 
@@ -148,5 +154,6 @@
         private System.Windows.Forms.Label lblFoodName;
         private System.Windows.Forms.PictureBox picItem;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSoldOut;
     }
 }

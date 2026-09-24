@@ -23,7 +23,39 @@ namespace C__Group_Assignment
             set { lblTableNo.Text = $"Table No: {value}"; }
         }
 
-        bool WalkInHistoryExpand = true;
+        public string OrderID
+        {
+            get { return lblOrderID.Text; }
+            set { lblOrderID.Text = $"OrderID: {value}"; }
+        }
+
+
+        private void frmMenuFeedback_Load(object sender, EventArgs e)
+        {
+            lblName.Text = $"Welcome Back! \n{Customer.CustomerName}";
+
+            if (Customer.CustomerDineInMethod == "Idle")
+            {
+                lblStatus.Text = $"Status: {Customer.CustomerDineInMethod}";
+            }
+            else if (Customer.CustomerDineInMethod == "Walk-In")
+            {
+                lblStatus.Text = $"Status: {Customer.CustomerDineInMethod} | {Customer.CustomerOrderTable}";
+            }
+            else if (Customer.CustomerDineInMethod == "Reservation")
+            {
+                lblStatus.Text = $"Status: {Customer.CustomerDineInMethod} | {Customer.CustomerReservationType}";
+            }
+
+            lblTime.Text = $"Time: {Customer.CurrentDateTime.ToString()}";
+            LoadCompletedOrders();
+            if (cmbWalkInDate.Items.Count == 0)
+            {
+                MessageBox.Show("You don't have any completed orders to give feedback on!", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        bool WalkInHistoryExpand = false;
 
         private void transitionWalkInHistory_Tick(object sender, EventArgs e)
         {
@@ -47,18 +79,16 @@ namespace C__Group_Assignment
 
         private void btnChooseFeedback_Click(object sender, EventArgs e)
         {
+            LoadCompletedOrders();
+            if (cmbWalkInDate.Items.Count == 0)
+            {
+                MessageBox.Show("You don't have any completed orders to give feedback on!", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
             if (pnlWalkInHistory.Width < 278)
             {
                 WalkInHistoryExpand = false;
                 transitionWalkInHistory.Start();
             }
-            /* here database reload data of datetime for cmbbox to have, because after feedback submitted,
-             * user will still in the page, thus if there's no more reservation history, no more choices for user,
-             * thus either letting them continue if still got data, or error mesage saying you have no more
-             * reservation history after clicking on the choosefeedback button.
-             * Maybe can based on userId , reservationStatus and reservationFeedback.
-             * reservationStatus == completed and reservationFeedback == Pending only can be opened and store
-            */
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -72,20 +102,23 @@ namespace C__Group_Assignment
 
         private void cmbWalkInDate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // do if theres information in the pnlReservation, messagebox ask them if they want to lost info
-            frmReset(); // after get database, if combobox is selected same value then no need reset, if different, reset the feedback menu
-            // Here get their id type numpeople and venue from database. Example:
-            lstFoodOrdered.Items.Add("Hamburger");
-            lstFoodOrdered.Items.Add("Risotto alla Milanese");
-            lstFoodOrdered.Items.Add("Enchiladas");
-            OrderTable = "R001";
+            if (cmbWalkInDate.SelectedItem != null)
+            {
+                var selectedOrder = ((string, DateTime))cmbWalkInDate.SelectedItem;
+
+                string selectedOrderID = selectedOrder.Item1;
+                DateTime selectedOrderDate = selectedOrder.Item2;
+
+                LoadCompletedOrderDetails(selectedOrderID, selectedOrderDate);
+                frmReset();
+            }
         }
 
         private void btnFeedbackNow_Click(object sender, EventArgs e)
         {
             if (cmbWalkInDate.SelectedIndex == -1)
             {
-                MessageBox.Show("Please select a date and time of your reservation!", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a date and time of your order!", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
@@ -115,55 +148,88 @@ namespace C__Group_Assignment
             radioButton13.Checked = false;
             radioButton14.Checked = false;
             radioButton15.Checked = false;
-            FeedbackReservation1 = 0;
-            FeedbackReservation2 = 0;
-            FeedbackReservation3 = 0;
-            FeedbackReservationText = null;
+            FeedbackMenu1 = 0;
+            FeedbackMenu2 = 0;
+            FeedbackMenu3 = 0;
+            FeedbackMenuText = null;
             txtComments.Clear();
-            lstFoodOrdered.Items.Clear();
-            OrderTable = null;
         }
 
-        int FeedbackReservation1 = 0;
-        int FeedbackReservation2 = 0;
-        int FeedbackReservation3 = 0;
-        string FeedbackReservationText;
+        int FeedbackMenu1 = 0;
+        int FeedbackMenu2 = 0;
+        int FeedbackMenu3 = 0;
+        string FeedbackMenuText;
 
         private void btnSubmitFeedback_Click(object sender, EventArgs e)
         {
-            if (radioButton1.Checked) FeedbackReservation1 = 1;
-            else if (radioButton2.Checked) FeedbackReservation1 = 2;
-            else if (radioButton3.Checked) FeedbackReservation1 = 3;
-            else if (radioButton4.Checked) FeedbackReservation1 = 4;
-            else if (radioButton5.Checked) FeedbackReservation1 = 5;
+            if (radioButton1.Checked) FeedbackMenu1 = 1;
+            else if (radioButton2.Checked) FeedbackMenu1 = 2;
+            else if (radioButton3.Checked) FeedbackMenu1 = 3;
+            else if (radioButton4.Checked) FeedbackMenu1 = 4;
+            else if (radioButton5.Checked) FeedbackMenu1 = 5;
 
-            if (radioButton6.Checked) FeedbackReservation2 = 1;
-            else if (radioButton7.Checked) FeedbackReservation2 = 2;
-            else if (radioButton8.Checked) FeedbackReservation2 = 3;
-            else if (radioButton9.Checked) FeedbackReservation2 = 4;
-            else if (radioButton10.Checked) FeedbackReservation2 = 5;
+            if (radioButton6.Checked) FeedbackMenu2 = 1;
+            else if (radioButton7.Checked) FeedbackMenu2 = 2;
+            else if (radioButton8.Checked) FeedbackMenu2 = 3;
+            else if (radioButton9.Checked) FeedbackMenu2 = 4;
+            else if (radioButton10.Checked) FeedbackMenu2 = 5;
 
-            if (radioButton11.Checked) FeedbackReservation3 = 1;
-            else if (radioButton12.Checked) FeedbackReservation3 = 2;
-            else if (radioButton13.Checked) FeedbackReservation3 = 3;
-            else if (radioButton14.Checked) FeedbackReservation3 = 4;
-            else if (radioButton15.Checked) FeedbackReservation3 = 5;
+            if (radioButton11.Checked) FeedbackMenu3 = 1;
+            else if (radioButton12.Checked) FeedbackMenu3 = 2;
+            else if (radioButton13.Checked) FeedbackMenu3 = 3;
+            else if (radioButton14.Checked) FeedbackMenu3 = 4;
+            else if (radioButton15.Checked) FeedbackMenu3 = 5;
 
-            FeedbackReservationText = txtComments.Text;
+            FeedbackMenuText = txtComments.Text;
 
-            if (FeedbackReservation1 == 0 || FeedbackReservation2 == 0 || FeedbackReservation3 == 0)
+            if (FeedbackMenu1 == 0 || FeedbackMenu2 == 0 || FeedbackMenu3 == 0)
             {
-                MessageBox.Show("Please complete filling up the reservation feedback!", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                MessageBox.Show("Please complete filling up the menu feedback!", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("Feedback has submitted successfully!", "Feedback Submitted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string OrderIDPut = lblOrderID.Text.Replace("OrderID: ", "").Trim();
+                Customer updateFeedbackDetails = new Customer();
+                updateFeedbackDetails.SaveMenuFeedbackDetails(OrderIDPut, FeedbackMenu1, FeedbackMenu2, FeedbackMenu3, FeedbackMenuText);
+                MessageBox.Show("Feedback has been submitted successfully!", "Feedback Submitted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cmbWalkInDate.SelectedIndex = -1;
                 cmbWalkInDate.Text = "Select your Walk-in Date...";
                 pnlMenuFeedback.Visible = false;
                 frmReset();
+                LoadCompletedOrders();
+                OrderID = null;
+                lstFoodOrdered.Items.Clear();
+                OrderTable = null;
             }
+        }
+
+        public void LoadCompletedOrders()
+        {
+            Customer loadCompletedOrders = new Customer();
+            List<(string OrderID, DateTime OrderDate)> orders = loadCompletedOrders.LoadPendingMenuFeedback();
+
+            cmbWalkInDate.Items.Clear();
+            foreach (var order in orders)
+            {
+                cmbWalkInDate.Items.Add((order.OrderID.ToString(), order.OrderDate));
+            }
+        }
+
+        public void LoadCompletedOrderDetails(string orderID, DateTime selectedDate)
+        {
+            Customer loadCompletedOrders = new Customer();
+            lstFoodOrdered.Items.Clear();
+            OrderTable = loadCompletedOrders.LoadCompletedOrderDetails(orderID, selectedDate);
+            List<string> foodItems = loadCompletedOrders.LoadOrderFoodItems(orderID);
+            if (foodItems != null)
+            {
+                foreach (var item in foodItems)
+                {
+                    lstFoodOrdered.Items.Add(item);
+                }
+                OrderID = orderID;
+            }
+
         }
     }
 }

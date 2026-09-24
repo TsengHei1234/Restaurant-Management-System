@@ -22,9 +22,43 @@ namespace C__Group_Assignment
             InitializeComponent();
         }
 
+
         public void getMenuForm(frmMenu frmMenu)
         {
             this.frmMenu = frmMenu;
+        }
+
+        public void SetExistingDineIn()
+        {
+            ExistingDineIn = true;
+        }
+
+        public void ResetExistingDineIn()
+        {
+            ExistingDineIn = false;
+        }
+        
+        bool ExistingDineIn = false;
+
+        private void frmCustomer_Load(object sender, EventArgs e)
+        {
+            loadform(new frmMenu(this));
+            if (this.pnlMain.Controls.Count > 0)
+                this.pnlMain.Controls.RemoveAt(0);
+
+            Customer checkExistingDineIn = new Customer();
+            string DineInMethod = checkExistingDineIn.HasExistingOrderOrReservation();
+            if (DineInMethod == "Reservation")
+            {
+                ExistingDineIn = true;
+                checkExistingDineIn.ReadOngoingReservation();
+
+            }
+            else if (DineInMethod == "WalkIn")
+            {
+                ExistingDineIn = true;
+                checkExistingDineIn.ReadOngoingOrderDetails();
+            }
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -66,6 +100,7 @@ namespace C__Group_Assignment
                 DialogResult leaveMenu = MessageBox.Show("Are you sure you want to leave this page? Food order progress will be lost!", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (leaveMenu == DialogResult.Yes)
                 {
+                    RestoreAllIngredients();
                     frmMenu.pnlOrders.Controls.Clear();
                     this.Close();
                 }
@@ -180,35 +215,6 @@ namespace C__Group_Assignment
             dropdownFeedback.Start();
         }
 
-        bool accountExpand = false;
-
-        private void dropdownAccount_Tick(object sender, EventArgs e)
-        {
-            if (!accountExpand)
-            {
-                containerAccount.Height += 5;
-                if (containerAccount.Height >= 171)
-                {
-                    dropdownAccount.Stop();
-                    accountExpand = true;
-                }
-            }
-            else
-            {
-                containerAccount.Height -= 5;
-                if (containerAccount.Height <= 56)
-                {
-                    dropdownAccount.Stop();
-                    accountExpand= false;
-                }
-            }
-        }
-
-        private void btnAccount_Click(object sender, EventArgs e)
-        {
-            dropdownAccount.Start();
-        }
-
         public void loadform(object Form)
         {
             if (this.pnlMain.Controls.Count > 0)
@@ -238,6 +244,7 @@ namespace C__Group_Assignment
                 DialogResult leaveMenu = MessageBox.Show("Are you sure you want to leave this page? Food order progress will be lost!", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (leaveMenu == DialogResult.Yes)
                 {
+                    RestoreAllIngredients();
                     frmMenu.pnlOrders.Controls.Clear();
                     loadform(Form);
                 }
@@ -250,12 +257,19 @@ namespace C__Group_Assignment
 
         private void btnMenu_Click(object sender, EventArgs e)
         {
-            confirmationLoadform(new frmMenu(this));
+            if (!ExistingDineIn)
+            {
+                confirmationLoadform(new frmDineInMethod(this));
+            }
+            else if (ExistingDineIn)
+            {
+                confirmationLoadform(new frmMenu(this));
+            }
         }
 
         private void btnViewOrder_Click(object sender, EventArgs e)
         {
-            confirmationLoadform(new frmViewOrder());
+            confirmationLoadform(new frmViewOrder(this));
         }
 
         private void btnMakeReservation_Click(object sender, EventArgs e)
@@ -280,31 +294,19 @@ namespace C__Group_Assignment
 
         private void btnPersonalInfo_Click(object sender, EventArgs e)
         {
-            confirmationLoadform(new frmPersonalInfo());
+            confirmationLoadform(new frmPersonalInfo(Customer.CustomerID, "Customer"));
         }
 
-        private void btnSecurity_Click(object sender, EventArgs e)
+        private void RestoreAllIngredients()
         {
-            confirmationLoadform(new frmSecurity());
-        }
-
-        private void frmCustomer_Load(object sender, EventArgs e)
-        {
-            loadform(new frmMenu(this));
-            if (this.pnlMain.Controls.Count > 0)
-                this.pnlMain.Controls.RemoveAt(0);
-
-            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myCS"].ToString());
-
-            con.Open();
-
-            SqlCommand cmd = new SqlCommand("select Username from customer", con);
-            SqlDataReader rd = cmd.ExecuteReader();
-            while (rd.Read())
+            foreach (Control control in frmMenu.pnlOrders.Controls)
             {
-                MessageBox.Show(rd.GetString(0));
+                if (control is ucOrder order)
+                {
+                    Customer restoreIngredients = new Customer();
+                    restoreIngredients.RestoreIngredients(order.orderID, order.orderAmount);
+                }
             }
-            con.Close();
         }
     }  
     

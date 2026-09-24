@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucOrder));
             this.lblOrderName = new System.Windows.Forms.Label();
             this.numOrder = new System.Windows.Forms.NumericUpDown();
             this.lblPrice = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.picFood = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFood)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +52,7 @@
             // 
             // numOrder
             // 
+            this.numOrder.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.numOrder.Location = new System.Drawing.Point(205, 44);
             this.numOrder.Name = "numOrder";
             this.numOrder.Size = new System.Drawing.Size(44, 20);
@@ -104,6 +107,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 3, 0, 3);
             this.Name = "ucOrder";
             this.Size = new System.Drawing.Size(257, 73);
+            this.Load += new System.EventHandler(this.ucOrder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFood)).EndInit();
             this.ResumeLayout(false);
@@ -118,5 +122,6 @@
         private System.Windows.Forms.Label lblPrice;
         private System.Windows.Forms.PictureBox picFood;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

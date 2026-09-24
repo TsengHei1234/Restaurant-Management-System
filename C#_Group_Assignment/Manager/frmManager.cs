@@ -216,7 +216,7 @@ namespace C__Group_Assignment
 
         private void btnPersonalInfo_Click(object sender, EventArgs e)
         {
-            loadform(new frmPersonalInfo());
+            loadform(new frmPersonalInfo(UserSession.UserID, UserSession.Role));
         }
 
         private void btnSecurity_Click(object sender, EventArgs e)

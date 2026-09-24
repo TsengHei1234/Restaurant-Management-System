@@ -39,6 +39,8 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pnlControlBox = new System.Windows.Forms.Panel();
+            this.btnSetDateTime = new System.Windows.Forms.Button();
+            this.lblDateTime = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
@@ -56,6 +58,7 @@
             this.linkForgot.TabIndex = 16;
             this.linkForgot.TabStop = true;
             this.linkForgot.Text = "Forgot Password?";
+            this.linkForgot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkForgot_LinkClicked);
             // 
             // button1
             // 
@@ -66,6 +69,7 @@
             this.button1.TabIndex = 15;
             this.button1.Text = "Create Account";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnLogin
             // 
@@ -85,6 +89,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(194, 25);
             this.txtPassword.TabIndex = 13;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // lblPassword
             // 
@@ -150,6 +155,30 @@
             this.pnlControlBox.Size = new System.Drawing.Size(92, 41);
             this.pnlControlBox.TabIndex = 7;
             // 
+            // btnSetDateTime
+            // 
+            this.btnSetDateTime.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetDateTime.Location = new System.Drawing.Point(324, 62);
+            this.btnSetDateTime.Name = "btnSetDateTime";
+            this.btnSetDateTime.Size = new System.Drawing.Size(109, 26);
+            this.btnSetDateTime.TabIndex = 18;
+            this.btnSetDateTime.Text = "Set Date Time";
+            this.btnSetDateTime.UseVisualStyleBackColor = true;
+            this.btnSetDateTime.Click += new System.EventHandler(this.btnSetDateTime_Click);
+            // 
+            // lblDateTime
+            // 
+            this.lblDateTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDateTime.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateTime.ForeColor = System.Drawing.Color.White;
+            this.lblDateTime.Location = new System.Drawing.Point(287, 41);
+            this.lblDateTime.Name = "lblDateTime";
+            this.lblDateTime.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblDateTime.Size = new System.Drawing.Size(149, 18);
+            this.lblDateTime.TabIndex = 20;
+            this.lblDateTime.Text = "12/31/2023 11:59:59 PM";
+            this.lblDateTime.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(232)))), ((int)(((byte)(229)))));
@@ -190,6 +219,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
             this.ClientSize = new System.Drawing.Size(436, 444);
+            this.Controls.Add(this.lblDateTime);
+            this.Controls.Add(this.btnSetDateTime);
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.linkForgot);
             this.Controls.Add(this.button1);
@@ -203,6 +234,7 @@
             this.Name = "frmlogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmlogin";
+            this.Load += new System.EventHandler(this.frmlogin_Load);
             this.pnlTop.ResumeLayout(false);
             this.pnlControlBox.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -224,5 +256,7 @@
         private System.Windows.Forms.Panel pnlControlBox;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnMinimize;
+        private System.Windows.Forms.Button btnSetDateTime;
+        private System.Windows.Forms.Label lblDateTime;
     }
 }

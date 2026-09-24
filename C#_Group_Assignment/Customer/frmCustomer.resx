@@ -291,22 +291,6 @@
         v3I9nv1iX5Jcsc0Oa75l123yem1+O9Aaw1xej/6cqgVyuV/E7IQLDpSbKgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnAccount.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAoJJREFUWEet
-        18vLTVEcxvGNJOVe3hJGSq5JvMQUE0qZKWSgKAaGBkqJAa8oxUByJ3fJxB8hlxQhBii5U3K/fp/dWW/L
-        ep9z9trnPU996rTP3r99WWuvtXZRIyOwEodwA2/xq+EdbuEoVmM0OpZJOIzP+JvpK05iKtrOUOzGd7iT
-        5PiJ/RiGWtFd34Ur2o4HmIKszMJruELBN1zDTuzAFXyB2zd4j/loGd35K7gCgU48Hmm6cAHumEAX0bRf
-        qM2rHvtZDESzDMARuGODh7B9Yg/cAcFLDEdVdCPP4GoEB/FfJuMH3M7BLuRmG1yNQGPHTPTmGNyOseXI
-        zRK4GrHzKDMSVT1YVDQ36u2uRkxPfCyKVY0NVdYjNxqyXY3UOlT22uA6cqPH62qkzqCcRNyfqT9YhKos
-        gDqZq5G6j+JDtKHKG8xDs2gUfQF3rKO+V/yONuTQ5LQXMzCoYRr0muZ05lT243LUk6vGjyrlYsL9kUN3
-        3M5dB7r44ma0oco9bMVCaPzQ2C9aLend34I7cMc6j5H1GurES6GT5WQxbsPVil1GsSba4BzAENTNYPRA
-        r6+rK5tQjIEWGG4HPdL+RidxF6HOPwFlTiPdYR86le1I62th05vpSF/HzehU1iKurSfSZ3mmto530op2
-        BfobzaJpEx9Hn2i18wjxjnpPN6DdqIPrGyGu+RTqdzZqCjc3qL20YM3NRLgF6ifMQctokPmI9GA1yTlo
-        ZTQKaTQYLcMpuI8ZnTxnNi2j9doTpEUCTWDPoalcI6kWoa0mNT32uagVDbX6Jqw7W8bU20+gaZvnZDYu
-        QU3gTuLolb6KbnQs47ARF6HmiS9IvzWxaGzXyOe+nEyK4h8yVi3JDACw/gAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="btnPersonalInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAyRJREFUWEe1
@@ -326,27 +310,6 @@
         1oMpcAncjfQzZsYaUbaq6g+eQdZJBGVzwgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnSecurity.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAA41JREFUWEfV
-        10nIVlUcx/GbOeBcpIIziahEZAsVk1ykpqsWWeDQJpQwkmgTKiXiPGALCWcxMJGwTUkg4kLE0kBQUEsQ
-        tTAUF4qKY6mp3+9znyPnOZ7n8X3BV/EHH3judO6959z7v+cpnre8hHcwFt1d8bTSA9/hP9yvuosf0Q8t
-        mrdwHp70EL7GbPxWXXcZE9Aisbuv41/MwAuIMwXXYM984IonlXb4ErdwE+MQMhhvlD8rGYFLcEgWoxOa
-        lb5YikVYgG24ALv3HEbDePfu9z/uYR1aw3hBJ+ExV7AdC2F7K+BF180ReGDsH3iwT715ERuR7vcT7C3T
-        AbMQLiTmjbRBNu5wAD5so9Af8Vh3wy9IGw1+hb0YpzdCezvgfj2RjRt3lz9r8gq8o4uIT5hzFXZ57iRb
-        4D5NuoAuWIP9uI34JE3hg3gQ69EHplkXYNfFDaa+x1C8hm+r6+oZDvPYC7iDveXPSnlNGwq8yLQObEVu
-        X3mh5ge47JBm4xN/qvxZtIKFJ21MnyHNROT21cswDqe1xLaz8c4cu46VpfKNyDXoa5nmU+T2/RshDtWS
-        8mc+bvQgy65ZhrRBWZx8RUPsUk+U7nca76PJscx64PLKUlGMRNpo8CFC3ka6fTPawzgEkzAfluhpCG9G
-        TaxkftGsYD5kOo60cTW6ALva2J4l+wbi7XKofSssbjXZBHcYX1kqik+QHqx6F+CDZrn2Q7Svuq4Rh6lm
-        HvE6/MDsqSyVdfsE0gOtdiEzEdYPcwXxQxbv38hh1HwffoYbQi+MgV+++CBrhr21Gn6qXefdm0bPjo7C
-        T/fn0brpeBirm+XXO/fLZhzLuJGcuTAbkNuuYwhzSIfKCY7rHa6aOCdwg7XcWDxCJavHYmTsUpd9Ne3F
-        eXBYPblzypDw2sterIlj8jvc6BgbJx3hIc15FyY8MysrS2U+Qnxyn6H0+EfSC5Znx9+3IcQ5ofO/cKDd
-        OAehxPosuN7JxwBXJMmd3LKfjVMoG7IL7bJwEl8dn3QnGUNcEcWpV2j4DOKLyJ1cu1A3r+JPuKNfy4FI
-        Y2VbVf4sBsG3JDRuLzoEa6N1qfD81E1nhE+uD8w3cEwts5bY8OV06mUs5/EJGtmJ9PNeN+8hTDb9tDoF
-        8/dZeJchvmJOWuIT5TiP7IpmxTfEwuG/oz/wBUK9iONdfYy/kJ7YL+pXaIsWjxfyJiZjKpwl152aP6MU
-        xQOAsqpaCV06owAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="btnSignOut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAa5JREFUWEft
@@ -362,9 +325,6 @@
   </data>
   <metadata name="dropdownFeedback.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>336, 14</value>
-  </metadata>
-  <metadata name="dropdownAccount.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>499, 14</value>
   </metadata>
   <metadata name="dropdownReservation.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>173, 13</value>

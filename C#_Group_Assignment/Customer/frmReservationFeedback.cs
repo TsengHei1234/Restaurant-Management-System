@@ -1,13 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace C__Group_Assignment
 {
@@ -20,7 +14,29 @@ namespace C__Group_Assignment
 
         private void frmReservationFeedback_Load(object sender, EventArgs e)
         {
-            // Database here, load info into cmbbox for user to select
+            lblName.Text = $"Welcome Back! \n{Customer.CustomerName}";
+
+            if (Customer.CustomerDineInMethod == "Idle")
+            {
+                lblStatus.Text = $"Status: {Customer.CustomerDineInMethod}";
+            }
+            else if (Customer.CustomerDineInMethod == "Walk-In")
+            {
+                lblStatus.Text = $"Status: {Customer.CustomerDineInMethod} | {Customer.CustomerOrderTable}";
+            }
+            else if (Customer.CustomerDineInMethod == "Reservation")
+            {
+                lblStatus.Text = $"Status: {Customer.CustomerDineInMethod} | {Customer.CustomerReservationType}";
+            }
+
+            lblTime.Text = $"Time: {Customer.CurrentDateTime.ToString()}";
+
+            LoadCompletedReservation();
+            if (cmbReservationDate.Items.Count == 0)
+            {
+                MessageBox.Show("You don't have any reservation to feedback!", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
         }
 
         public string ReservationID
@@ -47,7 +63,7 @@ namespace C__Group_Assignment
             set { lblReservationVenue.Text = $"Reservation Venue: {value}"; }
         }
 
-        bool ReservationHistoryExpand = true;
+        bool ReservationHistoryExpand = false;
 
         private void transitionReservationHistory_Tick(object sender, EventArgs e)
         {
@@ -71,18 +87,20 @@ namespace C__Group_Assignment
 
         private void btnChooseFeedback_Click(object sender, EventArgs e)
         {
-            if (pnlReservationHistory.Width < 278)
+            LoadCompletedReservation();
+            if (cmbReservationDate.Items.Count == 0)
             {
-                ReservationHistoryExpand = false;
-                transitionReservationHistory.Start();
+                MessageBox.Show("You don't have any reservation to feedback!", "Reminder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
-            /* here database reload data of datetime for cmbbox to have, because after feedback submitted,
-             * user will still in the page, thus if there's no more reservation history, no more choices for user,
-             * thus either letting them continue if still got data, or error mesage saying you have no more
-             * reservation history after clicking on the choosefeedback button.
-             * Maybe can based on userId , reservationStatus and reservationFeedback.
-             * reservationStatus == completed and reservationFeedback == Pending only can be opened and store
-            */
+            else
+            {
+                if (pnlReservationHistory.Width < 278)
+                {
+                    ReservationHistoryExpand = false;
+                    transitionReservationHistory.Start();
+                }
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -96,13 +114,12 @@ namespace C__Group_Assignment
 
         private void cmbReservationDate_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // do if theres information in the pnlReservation, messagebox ask them if they want to lost info
-            frmReset(); // after get database, if combobox is selected same value then no need reset, if different, reset the feedback menu
-            // Here get their id type numpeople and venue from database. Example:
-            ReservationID = "R001";
-            ReservationType = "Graduation";
-            ReservationNumberOfPeople = 50;
-            ReservationVenue = "Hall1";
+            if (cmbReservationDate.SelectedItem != null)
+            {
+                DateTime selectedDate = (DateTime)cmbReservationDate.SelectedItem;
+                LoadCompletedReservationDetails(selectedDate);
+                frmReset();
+            }
         }
 
         private void btnFeedbackNow_Click(object sender, EventArgs e)
@@ -144,16 +161,13 @@ namespace C__Group_Assignment
             FeedbackReservation3 = 0;
             FeedbackReservationText = null;
             txtComments.Clear();
-            ReservationID = null;
-            ReservationType = null;
-            ReservationNumberOfPeople = 0;
-            ReservationVenue = null;
+
         }
 
         int FeedbackReservation1 = 0;
         int FeedbackReservation2 = 0;
         int FeedbackReservation3 = 0;
-        string FeedbackReservationText;
+        string FeedbackReservationText = null;
 
         private void btnSubmitFeedback_Click(object sender, EventArgs e)
         {
@@ -184,11 +198,45 @@ namespace C__Group_Assignment
             }
             else
             {
+                string ReservationIDPut = lblReservationID.Text.Replace("Reservation ID: ", "").Trim();
+                Customer updateFeedbackDetails = new Customer();
+                updateFeedbackDetails.SaveFeedbackDetails(ReservationIDPut, FeedbackReservation1, FeedbackReservation2, FeedbackReservation3, FeedbackReservationText);
+                updateFeedbackDetails.UpdateReservationStatus(ReservationIDPut);
                 MessageBox.Show("Feedback has submitted successfully!", "Feedback Submitted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cmbReservationDate.SelectedIndex = -1;
                 cmbReservationDate.Text = "Select your datetime...";
                 pnlReservationFeedback.Visible = false;
                 frmReset();
+                LoadCompletedReservation();
+                ReservationID = null;
+                ReservationType = null;
+                ReservationNumberOfPeople = 0;
+                ReservationVenue = null;
+            }
+        }
+
+        public void LoadCompletedReservation()
+        {
+            Customer LoadSeccessfulReservationDates = new Customer();
+            List<DateTime> reservationDates = LoadSeccessfulReservationDates.LoadPendingReservationFeedback();
+
+            cmbReservationDate.Items.Clear();
+            foreach (DateTime date in reservationDates)
+            {
+                cmbReservationDate.Items.Add(date);
+            }
+        }
+
+        public void LoadCompletedReservationDetails(DateTime selectedDate)
+        {
+            Customer customer = new Customer();
+            DataRow completedReservationDetails = customer.LoadCompletedReservationDetails(selectedDate);
+            if (completedReservationDetails != null)
+            {
+                ReservationID = completedReservationDetails["ReservationID"].ToString();
+                ReservationType = completedReservationDetails["ReservationType"].ToString();
+                ReservationVenue = completedReservationDetails["ReservationVenue"].ToString();
+                ReservationNumberOfPeople = Convert.ToInt32(completedReservationDetails["ReservationPeopleAmount"]);
             }
         }
     }

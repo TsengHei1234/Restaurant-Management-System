@@ -61,6 +61,7 @@
             this.btnSubmitFeedback = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.pnlWalkInHistory = new System.Windows.Forms.Panel();
+            this.lblOrderID = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.lstFoodOrdered = new System.Windows.Forms.ListBox();
             this.lblTableNo = new System.Windows.Forms.Label();
@@ -108,10 +109,9 @@
             this.pnlMenuFeedback.Controls.Add(this.btnSubmitFeedback);
             this.pnlMenuFeedback.Controls.Add(this.label9);
             this.pnlMenuFeedback.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMenuFeedback.Location = new System.Drawing.Point(416, 153);
-            this.pnlMenuFeedback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlMenuFeedback.Location = new System.Drawing.Point(0, 100);
             this.pnlMenuFeedback.Name = "pnlMenuFeedback";
-            this.pnlMenuFeedback.Size = new System.Drawing.Size(1044, 813);
+            this.pnlMenuFeedback.Size = new System.Drawing.Size(973, 528);
             this.pnlMenuFeedback.TabIndex = 73;
             this.pnlMenuFeedback.Visible = false;
             // 
@@ -122,19 +122,17 @@
             this.panel2.Controls.Add(this.radioButton12);
             this.panel2.Controls.Add(this.radioButton14);
             this.panel2.Controls.Add(this.radioButton13);
-            this.panel2.Location = new System.Drawing.Point(528, 352);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(352, 229);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(860, 58);
+            this.panel2.Size = new System.Drawing.Size(573, 38);
             this.panel2.TabIndex = 60;
             // 
             // radioButton11
             // 
             this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(44, 20);
-            this.radioButton11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton11.Location = new System.Drawing.Point(29, 13);
             this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(21, 20);
+            this.radioButton11.Size = new System.Drawing.Size(14, 13);
             this.radioButton11.TabIndex = 53;
             this.radioButton11.TabStop = true;
             this.radioButton11.UseVisualStyleBackColor = true;
@@ -142,10 +140,9 @@
             // radioButton15
             // 
             this.radioButton15.AutoSize = true;
-            this.radioButton15.Location = new System.Drawing.Point(776, 20);
-            this.radioButton15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton15.Location = new System.Drawing.Point(517, 13);
             this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(21, 20);
+            this.radioButton15.Size = new System.Drawing.Size(14, 13);
             this.radioButton15.TabIndex = 57;
             this.radioButton15.TabStop = true;
             this.radioButton15.UseVisualStyleBackColor = true;
@@ -153,10 +150,9 @@
             // radioButton12
             // 
             this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(226, 22);
-            this.radioButton12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton12.Location = new System.Drawing.Point(151, 14);
             this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(21, 20);
+            this.radioButton12.Size = new System.Drawing.Size(14, 13);
             this.radioButton12.TabIndex = 54;
             this.radioButton12.TabStop = true;
             this.radioButton12.UseVisualStyleBackColor = true;
@@ -164,10 +160,9 @@
             // radioButton14
             // 
             this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(592, 22);
-            this.radioButton14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton14.Location = new System.Drawing.Point(395, 14);
             this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(21, 20);
+            this.radioButton14.Size = new System.Drawing.Size(14, 13);
             this.radioButton14.TabIndex = 56;
             this.radioButton14.TabStop = true;
             this.radioButton14.UseVisualStyleBackColor = true;
@@ -175,10 +170,9 @@
             // radioButton13
             // 
             this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(410, 20);
-            this.radioButton13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton13.Location = new System.Drawing.Point(273, 13);
             this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(21, 20);
+            this.radioButton13.Size = new System.Drawing.Size(14, 13);
             this.radioButton13.TabIndex = 55;
             this.radioButton13.TabStop = true;
             this.radioButton13.UseVisualStyleBackColor = true;
@@ -190,19 +184,17 @@
             this.panel1.Controls.Add(this.radioButton7);
             this.panel1.Controls.Add(this.radioButton9);
             this.panel1.Controls.Add(this.radioButton8);
-            this.panel1.Location = new System.Drawing.Point(528, 249);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(352, 162);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(860, 58);
+            this.panel1.Size = new System.Drawing.Size(573, 38);
             this.panel1.TabIndex = 59;
             // 
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(44, 20);
-            this.radioButton6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton6.Location = new System.Drawing.Point(29, 13);
             this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(21, 20);
+            this.radioButton6.Size = new System.Drawing.Size(14, 13);
             this.radioButton6.TabIndex = 53;
             this.radioButton6.TabStop = true;
             this.radioButton6.UseVisualStyleBackColor = true;
@@ -210,10 +202,9 @@
             // radioButton10
             // 
             this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(776, 20);
-            this.radioButton10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton10.Location = new System.Drawing.Point(517, 13);
             this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(21, 20);
+            this.radioButton10.Size = new System.Drawing.Size(14, 13);
             this.radioButton10.TabIndex = 57;
             this.radioButton10.TabStop = true;
             this.radioButton10.UseVisualStyleBackColor = true;
@@ -221,10 +212,9 @@
             // radioButton7
             // 
             this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(226, 22);
-            this.radioButton7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton7.Location = new System.Drawing.Point(151, 14);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(21, 20);
+            this.radioButton7.Size = new System.Drawing.Size(14, 13);
             this.radioButton7.TabIndex = 54;
             this.radioButton7.TabStop = true;
             this.radioButton7.UseVisualStyleBackColor = true;
@@ -232,10 +222,9 @@
             // radioButton9
             // 
             this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(592, 22);
-            this.radioButton9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton9.Location = new System.Drawing.Point(395, 14);
             this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(21, 20);
+            this.radioButton9.Size = new System.Drawing.Size(14, 13);
             this.radioButton9.TabIndex = 56;
             this.radioButton9.TabStop = true;
             this.radioButton9.UseVisualStyleBackColor = true;
@@ -243,10 +232,9 @@
             // radioButton8
             // 
             this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(410, 20);
-            this.radioButton8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton8.Location = new System.Drawing.Point(273, 13);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(21, 20);
+            this.radioButton8.Size = new System.Drawing.Size(14, 13);
             this.radioButton8.TabIndex = 55;
             this.radioButton8.TabStop = true;
             this.radioButton8.UseVisualStyleBackColor = true;
@@ -255,10 +243,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1257, 55);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(838, 36);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 64);
+            this.label8.Size = new System.Drawing.Size(73, 42);
             this.label8.TabIndex = 64;
             this.label8.Text = "Very\r\nSatisfied";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,10 +254,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(1078, 72);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(719, 47);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 32);
+            this.label7.Size = new System.Drawing.Size(73, 21);
             this.label7.TabIndex = 63;
             this.label7.Text = "Satisfied";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -279,10 +265,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(904, 72);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(603, 47);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 32);
+            this.label6.Size = new System.Drawing.Size(64, 21);
             this.label6.TabIndex = 62;
             this.label6.Text = "Neutral";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -291,10 +276,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(705, 72);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(470, 47);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 32);
+            this.label5.Size = new System.Drawing.Size(93, 21);
             this.label5.TabIndex = 61;
             this.label5.Text = "Dissatisfied";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -303,10 +287,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(522, 55);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(348, 36);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 64);
+            this.label4.Size = new System.Drawing.Size(93, 42);
             this.label4.TabIndex = 60;
             this.label4.Text = "Very\r\nDissatisfied";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -318,29 +301,26 @@
             this.pnlQuestion1.Controls.Add(this.radioButton2);
             this.pnlQuestion1.Controls.Add(this.radioButton4);
             this.pnlQuestion1.Controls.Add(this.radioButton3);
-            this.pnlQuestion1.Location = new System.Drawing.Point(528, 154);
-            this.pnlQuestion1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlQuestion1.Location = new System.Drawing.Point(352, 100);
             this.pnlQuestion1.Name = "pnlQuestion1";
-            this.pnlQuestion1.Size = new System.Drawing.Size(860, 58);
+            this.pnlQuestion1.Size = new System.Drawing.Size(573, 38);
             this.pnlQuestion1.TabIndex = 58;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(44, 20);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton1.Location = new System.Drawing.Point(29, 13);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(21, 20);
+            this.radioButton1.Size = new System.Drawing.Size(14, 13);
             this.radioButton1.TabIndex = 53;
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(776, 20);
-            this.radioButton5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton5.Location = new System.Drawing.Point(517, 13);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(21, 20);
+            this.radioButton5.Size = new System.Drawing.Size(14, 13);
             this.radioButton5.TabIndex = 57;
             this.radioButton5.TabStop = true;
             this.radioButton5.UseVisualStyleBackColor = true;
@@ -348,10 +328,9 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(226, 22);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton2.Location = new System.Drawing.Point(151, 14);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(21, 20);
+            this.radioButton2.Size = new System.Drawing.Size(14, 13);
             this.radioButton2.TabIndex = 54;
             this.radioButton2.TabStop = true;
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -359,10 +338,9 @@
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(592, 22);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton4.Location = new System.Drawing.Point(395, 14);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(21, 20);
+            this.radioButton4.Size = new System.Drawing.Size(14, 13);
             this.radioButton4.TabIndex = 56;
             this.radioButton4.TabStop = true;
             this.radioButton4.UseVisualStyleBackColor = true;
@@ -370,29 +348,26 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(410, 20);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.radioButton3.Location = new System.Drawing.Point(273, 13);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(21, 20);
+            this.radioButton3.Size = new System.Drawing.Size(14, 13);
             this.radioButton3.TabIndex = 55;
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // txtComments
             // 
-            this.txtComments.Location = new System.Drawing.Point(87, 548);
-            this.txtComments.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtComments.Location = new System.Drawing.Point(58, 356);
             this.txtComments.Name = "txtComments";
-            this.txtComments.Size = new System.Drawing.Size(1298, 26);
+            this.txtComments.Size = new System.Drawing.Size(867, 20);
             this.txtComments.TabIndex = 52;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(81, 485);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(54, 315);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(564, 32);
+            this.label3.Size = new System.Drawing.Size(374, 21);
             this.label3.TabIndex = 51;
             this.label3.Text = "Any other comments or suggestions? (Optional)";
             // 
@@ -400,10 +375,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(81, 346);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(54, 225);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(299, 64);
+            this.label1.Size = new System.Drawing.Size(199, 42);
             this.label1.TabIndex = 50;
             this.label1.Text = "Are you satisfied with the \r\nportion of the food?";
             // 
@@ -411,10 +385,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(81, 242);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(54, 157);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(328, 64);
+            this.label2.Size = new System.Drawing.Size(219, 42);
             this.label2.TabIndex = 49;
             this.label2.Text = "How satisfied were you with\r\nthe variety of menu options?";
             // 
@@ -425,10 +398,9 @@
             this.btnSubmitFeedback.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnSubmitFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmitFeedback.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmitFeedback.Location = new System.Drawing.Point(284, 651);
-            this.btnSubmitFeedback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSubmitFeedback.Location = new System.Drawing.Point(189, 423);
             this.btnSubmitFeedback.Name = "btnSubmitFeedback";
-            this.btnSubmitFeedback.Size = new System.Drawing.Size(963, 80);
+            this.btnSubmitFeedback.Size = new System.Drawing.Size(642, 52);
             this.btnSubmitFeedback.TabIndex = 47;
             this.btnSubmitFeedback.Text = "Submit Feedback";
             this.btnSubmitFeedback.UseVisualStyleBackColor = false;
@@ -438,16 +410,16 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(81, 135);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(54, 88);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(321, 64);
+            this.label9.Size = new System.Drawing.Size(215, 42);
             this.label9.TabIndex = 32;
             this.label9.Text = "How satisfied were you with\r\nthe food quality?\r\n";
             // 
             // pnlWalkInHistory
             // 
             this.pnlWalkInHistory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlWalkInHistory.Controls.Add(this.lblOrderID);
             this.pnlWalkInHistory.Controls.Add(this.label10);
             this.pnlWalkInHistory.Controls.Add(this.lstFoodOrdered);
             this.pnlWalkInHistory.Controls.Add(this.lblTableNo);
@@ -457,21 +429,30 @@
             this.pnlWalkInHistory.Controls.Add(this.panel4);
             this.pnlWalkInHistory.Controls.Add(this.label12);
             this.pnlWalkInHistory.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlWalkInHistory.Location = new System.Drawing.Point(0, 153);
-            this.pnlWalkInHistory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pnlWalkInHistory.Location = new System.Drawing.Point(0, 100);
             this.pnlWalkInHistory.Name = "pnlWalkInHistory";
-            this.pnlWalkInHistory.Size = new System.Drawing.Size(416, 813);
+            this.pnlWalkInHistory.Size = new System.Drawing.Size(0, 528);
             this.pnlWalkInHistory.TabIndex = 72;
+            // 
+            // lblOrderID
+            // 
+            this.lblOrderID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblOrderID.AutoSize = true;
+            this.lblOrderID.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOrderID.Location = new System.Drawing.Point(-260, 298);
+            this.lblOrderID.Name = "lblOrderID";
+            this.lblOrderID.Size = new System.Drawing.Size(72, 20);
+            this.lblOrderID.TabIndex = 41;
+            this.lblOrderID.Text = "OrderID: ";
             // 
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(27, 203);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(-258, 132);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(88, 31);
+            this.label10.Size = new System.Drawing.Size(57, 20);
             this.label10.TabIndex = 40;
             this.label10.Text = "Details";
             // 
@@ -480,11 +461,10 @@
             this.lstFoodOrdered.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lstFoodOrdered.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstFoodOrdered.FormattingEnabled = true;
-            this.lstFoodOrdered.ItemHeight = 28;
-            this.lstFoodOrdered.Location = new System.Drawing.Point(32, 295);
-            this.lstFoodOrdered.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lstFoodOrdered.ItemHeight = 17;
+            this.lstFoodOrdered.Location = new System.Drawing.Point(-255, 192);
             this.lstFoodOrdered.Name = "lstFoodOrdered";
-            this.lstFoodOrdered.Size = new System.Drawing.Size(289, 144);
+            this.lstFoodOrdered.Size = new System.Drawing.Size(194, 89);
             this.lstFoodOrdered.TabIndex = 36;
             // 
             // lblTableNo
@@ -492,10 +472,9 @@
             this.lblTableNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTableNo.AutoSize = true;
             this.lblTableNo.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTableNo.Location = new System.Drawing.Point(26, 495);
-            this.lblTableNo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTableNo.Location = new System.Drawing.Point(-259, 329);
             this.lblTableNo.Name = "lblTableNo";
-            this.lblTableNo.Size = new System.Drawing.Size(113, 31);
+            this.lblTableNo.Size = new System.Drawing.Size(74, 20);
             this.lblTableNo.TabIndex = 35;
             this.lblTableNo.Text = "Table No:";
             // 
@@ -504,10 +483,9 @@
             this.lblFoodOrdered.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFoodOrdered.AutoSize = true;
             this.lblFoodOrdered.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodOrdered.Location = new System.Drawing.Point(27, 252);
-            this.lblFoodOrdered.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFoodOrdered.Location = new System.Drawing.Point(-258, 164);
             this.lblFoodOrdered.Name = "lblFoodOrdered";
-            this.lblFoodOrdered.Size = new System.Drawing.Size(167, 31);
+            this.lblFoodOrdered.Size = new System.Drawing.Size(109, 20);
             this.lblFoodOrdered.TabIndex = 34;
             this.lblFoodOrdered.Text = "Food Ordered:";
             // 
@@ -519,10 +497,9 @@
             "2023-12-29 23:59:59",
             "2023-12-30 23:59:59",
             "2023-12-31 23:59:59"});
-            this.cmbWalkInDate.Location = new System.Drawing.Point(30, 134);
-            this.cmbWalkInDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbWalkInDate.Location = new System.Drawing.Point(-256, 87);
             this.cmbWalkInDate.Name = "cmbWalkInDate";
-            this.cmbWalkInDate.Size = new System.Drawing.Size(294, 28);
+            this.cmbWalkInDate.Size = new System.Drawing.Size(197, 21);
             this.cmbWalkInDate.TabIndex = 32;
             this.cmbWalkInDate.Text = "Select your Walk-in Date...";
             this.cmbWalkInDate.SelectedIndexChanged += new System.EventHandler(this.cmbWalkInDate_SelectedIndexChanged);
@@ -538,10 +515,9 @@
             this.btnFeedbackNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFeedbackNow.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFeedbackNow.ForeColor = System.Drawing.Color.Black;
-            this.btnFeedbackNow.Location = new System.Drawing.Point(32, 577);
-            this.btnFeedbackNow.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnFeedbackNow.Location = new System.Drawing.Point(-255, 375);
             this.btnFeedbackNow.Name = "btnFeedbackNow";
-            this.btnFeedbackNow.Size = new System.Drawing.Size(336, 75);
+            this.btnFeedbackNow.Size = new System.Drawing.Size(224, 49);
             this.btnFeedbackNow.TabIndex = 25;
             this.btnFeedbackNow.Text = "Feedback Now";
             this.btnFeedbackNow.UseVisualStyleBackColor = false;
@@ -554,9 +530,8 @@
             this.panel4.Controls.Add(this.lblWalkInHistory);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(414, 51);
+            this.panel4.Size = new System.Drawing.Size(0, 34);
             this.panel4.TabIndex = 0;
             // 
             // btnClose
@@ -570,10 +545,9 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.Transparent;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.Location = new System.Drawing.Point(351, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClose.Location = new System.Drawing.Point(-41, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(66, 49);
+            this.btnClose.Size = new System.Drawing.Size(44, 32);
             this.btnClose.TabIndex = 9;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -583,10 +557,9 @@
             this.lblWalkInHistory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWalkInHistory.AutoSize = true;
             this.lblWalkInHistory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWalkInHistory.Location = new System.Drawing.Point(21, 9);
-            this.lblWalkInHistory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblWalkInHistory.Location = new System.Drawing.Point(-261, 6);
             this.lblWalkInHistory.Name = "lblWalkInHistory";
-            this.lblWalkInHistory.Size = new System.Drawing.Size(192, 32);
+            this.lblWalkInHistory.Size = new System.Drawing.Size(128, 21);
             this.lblWalkInHistory.TabIndex = 16;
             this.lblWalkInHistory.Text = "Walk-in History";
             // 
@@ -595,10 +568,9 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(24, 85);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(-260, 55);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(251, 32);
+            this.label12.Size = new System.Drawing.Size(168, 21);
             this.label12.TabIndex = 20;
             this.label12.Text = "Choose Walk-in Date";
             // 
@@ -610,19 +582,17 @@
             this.pnlTop.Controls.Add(this.pnlInfo);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlTop.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1460, 153);
+            this.pnlTop.Size = new System.Drawing.Size(973, 100);
             this.pnlTop.TabIndex = 71;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.btnChooseFeedback);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(738, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(490, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(304, 151);
+            this.panel3.Size = new System.Drawing.Size(203, 98);
             this.panel3.TabIndex = 18;
             // 
             // btnChooseFeedback
@@ -635,10 +605,9 @@
             this.btnChooseFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChooseFeedback.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnChooseFeedback.ForeColor = System.Drawing.Color.Black;
-            this.btnChooseFeedback.Location = new System.Drawing.Point(2, 37);
-            this.btnChooseFeedback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnChooseFeedback.Location = new System.Drawing.Point(1, 24);
             this.btnChooseFeedback.Name = "btnChooseFeedback";
-            this.btnChooseFeedback.Size = new System.Drawing.Size(300, 75);
+            this.btnChooseFeedback.Size = new System.Drawing.Size(200, 49);
             this.btnChooseFeedback.TabIndex = 26;
             this.btnChooseFeedback.Text = "Choose Walk-in Date\r\nto Feedback\r\n";
             this.btnChooseFeedback.UseVisualStyleBackColor = false;
@@ -648,10 +617,9 @@
             // 
             this.lblReservationFeedback.AutoSize = true;
             this.lblReservationFeedback.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReservationFeedback.Location = new System.Drawing.Point(58, 51);
-            this.lblReservationFeedback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblReservationFeedback.Location = new System.Drawing.Point(39, 33);
             this.lblReservationFeedback.Name = "lblReservationFeedback";
-            this.lblReservationFeedback.Size = new System.Drawing.Size(326, 55);
+            this.lblReservationFeedback.Size = new System.Drawing.Size(218, 37);
             this.lblReservationFeedback.TabIndex = 16;
             this.lblReservationFeedback.Text = "Menu Feedback";
             // 
@@ -663,29 +631,27 @@
             this.pnlInfo.Controls.Add(this.lblName);
             this.pnlInfo.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pnlInfo.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlInfo.Location = new System.Drawing.Point(1042, 0);
-            this.pnlInfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 5);
+            this.pnlInfo.Location = new System.Drawing.Point(693, 0);
+            this.pnlInfo.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
             this.pnlInfo.Name = "pnlInfo";
-            this.pnlInfo.Size = new System.Drawing.Size(416, 151);
+            this.pnlInfo.Size = new System.Drawing.Size(278, 98);
             this.pnlInfo.TabIndex = 0;
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(24, 78);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatus.Location = new System.Drawing.Point(16, 51);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(260, 20);
+            this.lblStatus.Size = new System.Drawing.Size(173, 13);
             this.lblStatus.TabIndex = 2;
             this.lblStatus.Text = "Status: Reservation | Birthday Party";
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
-            this.lblTime.Location = new System.Drawing.Point(24, 109);
-            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTime.Location = new System.Drawing.Point(16, 71);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(198, 20);
+            this.lblTime.Size = new System.Drawing.Size(139, 13);
             this.lblTime.TabIndex = 1;
             this.lblTime.Text = "Time: 21/5/2024 | 11.59PM";
             // 
@@ -693,10 +659,9 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.lblName.Location = new System.Drawing.Point(24, 12);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(16, 8);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(156, 56);
+            this.lblName.Size = new System.Drawing.Size(109, 38);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Welcome Back! \r\nUsername";
             // 
@@ -707,16 +672,16 @@
             // 
             // frmMenuFeedback
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1460, 966);
+            this.ClientSize = new System.Drawing.Size(973, 628);
             this.Controls.Add(this.pnlMenuFeedback);
             this.Controls.Add(this.pnlWalkInHistory);
             this.Controls.Add(this.pnlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmMenuFeedback";
             this.Text = "frmMenuFeedback";
+            this.Load += new System.EventHandler(this.frmMenuFeedback_Load);
             this.pnlMenuFeedback.ResumeLayout(false);
             this.pnlMenuFeedback.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -790,5 +755,6 @@
         private System.Windows.Forms.Timer transitionWalkInHistory;
         private System.Windows.Forms.ListBox lstFoodOrdered;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblOrderID;
     }
 }

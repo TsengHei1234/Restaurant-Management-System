@@ -63,6 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer\customer.cs" />
+    <Compile Include="Customer\frmDineInMethod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\frmDineInMethod.Designer.cs">
+      <DependentUpon>frmDineInMethod.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer\frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,27 @@
     <Compile Include="frmlogin.Designer.cs">
       <DependentUpon>frmlogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateAccount.Designer.cs">
+      <DependentUpon>frmCreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgotPassword.Designer.cs">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetDateTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetDateTime.Designer.cs">
+      <DependentUpon>frmSetDateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetDateTime.cs" />
+    <Compile Include="UserLogin.cs" />
+    <Compile Include="UserSession.cs" />
     <Compile Include="Manager\frmSaleReports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +275,9 @@
     <EmbeddedResource Include="Customer\frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Customer\frmDineInMethod.resx">
+      <DependentUpon>frmDineInMethod.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customer\frmMakeReservation.resx">
       <DependentUpon>frmMakeReservation.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,6 +310,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmlogin.resx">
       <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateAccount.resx">
+      <DependentUpon>frmCreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgotPassword.resx">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetDateTime.resx">
+      <DependentUpon>frmSetDateTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manager\frmSaleReports.resx">
       <DependentUpon>frmSaleReports.cs</DependentUpon>
@@ -377,13 +416,25 @@
     <None Include="Resources\Online Banking.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database.mdf</DependentUpon>
-    </Content>
+    <None Include="Resources\aglioeolio.png" />
+    <None Include="Resources\Birthday.png" />
+    <None Include="Resources\buritto.png" />
+    <None Include="Resources\caprese_panini.png" />
+    <None Include="Resources\carbonara.png" />
+    <None Include="Resources\chicken_katsu.png" />
+    <None Include="Resources\Enchiladas.png" />
+    <None Include="Resources\fajita.png" />
+    <None Include="Resources\Gathering.png" />
+    <None Include="Resources\Graduation.png" />
+    <None Include="Resources\margheritapizza.png" />
+    <None Include="Resources\onigiri.png" />
+    <None Include="Resources\Party.png" />
+    <None Include="Resources\quesadillas.png" />
+    <None Include="Resources\risottoallamilanese.png" />
+    <None Include="Resources\taco.png" />
+    <None Include="Resources\tempura.png" />
+    <None Include="Resources\teriyaki_chicken.png" />
+    <None Include="Resources\yakisoba.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

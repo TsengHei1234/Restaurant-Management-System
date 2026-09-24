@@ -56,17 +56,11 @@
             this.btnReservationFeedback = new System.Windows.Forms.Button();
             this.pnlMenuFeedback = new System.Windows.Forms.Panel();
             this.btnMenuFeedback = new System.Windows.Forms.Button();
-            this.containerAccount = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlAccount = new System.Windows.Forms.Panel();
-            this.btnAccount = new System.Windows.Forms.Button();
             this.pnlPersonalInfo = new System.Windows.Forms.Panel();
             this.btnPersonalInfo = new System.Windows.Forms.Button();
-            this.pnlSecurity = new System.Windows.Forms.Panel();
-            this.btnSecurity = new System.Windows.Forms.Button();
             this.pnlSignOut = new System.Windows.Forms.Panel();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.dropdownFeedback = new System.Windows.Forms.Timer(this.components);
-            this.dropdownAccount = new System.Windows.Forms.Timer(this.components);
             this.dropdownReservation = new System.Windows.Forms.Timer(this.components);
             this.transitionSidebar = new System.Windows.Forms.Timer(this.components);
             this.pnlMain = new System.Windows.Forms.Panel();
@@ -83,10 +77,7 @@
             this.pnlSendFeedback.SuspendLayout();
             this.pnlReservationFeedback.SuspendLayout();
             this.pnlMenuFeedback.SuspendLayout();
-            this.containerAccount.SuspendLayout();
-            this.pnlAccount.SuspendLayout();
             this.pnlPersonalInfo.SuspendLayout();
-            this.pnlSecurity.SuspendLayout();
             this.pnlSignOut.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -201,7 +192,7 @@
             this.pnlSidebar.Controls.Add(this.pnlViewOrder);
             this.pnlSidebar.Controls.Add(this.containerReservation);
             this.pnlSidebar.Controls.Add(this.containerFeedback);
-            this.pnlSidebar.Controls.Add(this.containerAccount);
+            this.pnlSidebar.Controls.Add(this.pnlPersonalInfo);
             this.pnlSidebar.Controls.Add(this.pnlSignOut);
             this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSidebar.Location = new System.Drawing.Point(0, 39);
@@ -476,53 +467,10 @@
             this.btnMenuFeedback.UseVisualStyleBackColor = false;
             this.btnMenuFeedback.Click += new System.EventHandler(this.btnMenuFeedback_Click);
             // 
-            // containerAccount
-            // 
-            this.containerAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(176)))), ((int)(((byte)(170)))));
-            this.containerAccount.Controls.Add(this.pnlAccount);
-            this.containerAccount.Controls.Add(this.pnlPersonalInfo);
-            this.containerAccount.Controls.Add(this.pnlSecurity);
-            this.containerAccount.ForeColor = System.Drawing.Color.White;
-            this.containerAccount.Location = new System.Drawing.Point(0, 226);
-            this.containerAccount.Margin = new System.Windows.Forms.Padding(0);
-            this.containerAccount.Name = "containerAccount";
-            this.containerAccount.Size = new System.Drawing.Size(200, 56);
-            this.containerAccount.TabIndex = 12;
-            // 
-            // pnlAccount
-            // 
-            this.pnlAccount.Controls.Add(this.btnAccount);
-            this.pnlAccount.Location = new System.Drawing.Point(0, 0);
-            this.pnlAccount.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlAccount.Name = "pnlAccount";
-            this.pnlAccount.Size = new System.Drawing.Size(200, 57);
-            this.pnlAccount.TabIndex = 8;
-            // 
-            // btnAccount
-            // 
-            this.btnAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
-            this.btnAccount.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(202)))));
-            this.btnAccount.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAccount.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAccount.ForeColor = System.Drawing.Color.White;
-            this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
-            this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.Location = new System.Drawing.Point(-12, -18);
-            this.btnAccount.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnAccount.Size = new System.Drawing.Size(246, 98);
-            this.btnAccount.TabIndex = 5;
-            this.btnAccount.Text = "            Account";
-            this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.UseVisualStyleBackColor = false;
-            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
-            // 
             // pnlPersonalInfo
             // 
             this.pnlPersonalInfo.Controls.Add(this.btnPersonalInfo);
-            this.pnlPersonalInfo.Location = new System.Drawing.Point(0, 57);
+            this.pnlPersonalInfo.Location = new System.Drawing.Point(0, 226);
             this.pnlPersonalInfo.Margin = new System.Windows.Forms.Padding(0);
             this.pnlPersonalInfo.Name = "pnlPersonalInfo";
             this.pnlPersonalInfo.Size = new System.Drawing.Size(200, 57);
@@ -530,7 +478,7 @@
             // 
             // btnPersonalInfo
             // 
-            this.btnPersonalInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(176)))), ((int)(((byte)(170)))));
+            this.btnPersonalInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
             this.btnPersonalInfo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(202)))));
             this.btnPersonalInfo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnPersonalInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -549,40 +497,10 @@
             this.btnPersonalInfo.UseVisualStyleBackColor = false;
             this.btnPersonalInfo.Click += new System.EventHandler(this.btnPersonalInfo_Click);
             // 
-            // pnlSecurity
-            // 
-            this.pnlSecurity.Controls.Add(this.btnSecurity);
-            this.pnlSecurity.Location = new System.Drawing.Point(0, 114);
-            this.pnlSecurity.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlSecurity.Name = "pnlSecurity";
-            this.pnlSecurity.Size = new System.Drawing.Size(200, 57);
-            this.pnlSecurity.TabIndex = 10;
-            // 
-            // btnSecurity
-            // 
-            this.btnSecurity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(176)))), ((int)(((byte)(170)))));
-            this.btnSecurity.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(202)))));
-            this.btnSecurity.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnSecurity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSecurity.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSecurity.ForeColor = System.Drawing.Color.White;
-            this.btnSecurity.Image = ((System.Drawing.Image)(resources.GetObject("btnSecurity.Image")));
-            this.btnSecurity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSecurity.Location = new System.Drawing.Point(-12, -19);
-            this.btnSecurity.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSecurity.Name = "btnSecurity";
-            this.btnSecurity.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnSecurity.Size = new System.Drawing.Size(235, 98);
-            this.btnSecurity.TabIndex = 5;
-            this.btnSecurity.Text = "            Security";
-            this.btnSecurity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSecurity.UseVisualStyleBackColor = false;
-            this.btnSecurity.Click += new System.EventHandler(this.btnSecurity_Click);
-            // 
             // pnlSignOut
             // 
             this.pnlSignOut.Controls.Add(this.btnSignOut);
-            this.pnlSignOut.Location = new System.Drawing.Point(0, 282);
+            this.pnlSignOut.Location = new System.Drawing.Point(0, 283);
             this.pnlSignOut.Margin = new System.Windows.Forms.Padding(0);
             this.pnlSignOut.Name = "pnlSignOut";
             this.pnlSignOut.Size = new System.Drawing.Size(200, 57);
@@ -612,11 +530,6 @@
             // 
             this.dropdownFeedback.Interval = 10;
             this.dropdownFeedback.Tick += new System.EventHandler(this.dropdownFeedback_Tick);
-            // 
-            // dropdownAccount
-            // 
-            this.dropdownAccount.Interval = 10;
-            this.dropdownAccount.Tick += new System.EventHandler(this.dropdownAccount_Tick);
             // 
             // dropdownReservation
             // 
@@ -664,10 +577,7 @@
             this.pnlSendFeedback.ResumeLayout(false);
             this.pnlReservationFeedback.ResumeLayout(false);
             this.pnlMenuFeedback.ResumeLayout(false);
-            this.containerAccount.ResumeLayout(false);
-            this.pnlAccount.ResumeLayout(false);
             this.pnlPersonalInfo.ResumeLayout(false);
-            this.pnlSecurity.ResumeLayout(false);
             this.pnlSignOut.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -698,22 +608,16 @@
         private System.Windows.Forms.Button btnMenuFeedback;
         private System.Windows.Forms.Panel pnlReservationFeedback;
         private System.Windows.Forms.Button btnReservationFeedback;
-        private System.Windows.Forms.FlowLayoutPanel containerAccount;
-        private System.Windows.Forms.Panel pnlAccount;
-        private System.Windows.Forms.Button btnAccount;
         private System.Windows.Forms.Panel pnlPersonalInfo;
         private System.Windows.Forms.Button btnPersonalInfo;
-        private System.Windows.Forms.Panel pnlSecurity;
-        private System.Windows.Forms.Button btnSecurity;
         private System.Windows.Forms.Timer dropdownFeedback;
-        private System.Windows.Forms.Timer dropdownAccount;
         private System.Windows.Forms.Timer dropdownReservation;
         private System.Windows.Forms.Timer transitionSidebar;
         private System.Windows.Forms.Button btnSidebar;
-        private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Panel pnlControlBox;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnMaximize;
+        private System.Windows.Forms.Panel pnlMain;
     }
 }
