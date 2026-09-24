@@ -400,6 +400,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Database.mdf" />
+    <None Include="Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\minimize1 Icon.png" />
