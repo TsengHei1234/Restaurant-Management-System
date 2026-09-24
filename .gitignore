@@ -265,6 +265,8 @@ ServiceFabricBackup/
 *.mdf
 *.ldf
 *.ndf
+!C#_Group_Assignment/Database.mdf
+!C#_Group_Assignment/Database_log.ldf
 
 # Business Intelligence projects
 *.rdl.data
