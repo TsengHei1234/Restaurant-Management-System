@@ -1,20 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace C__Group_Assignment
 {
     public partial class frmChef : Form
     {
+        private Point mouseLocation;
+        private bool sidebarExpand = true;
+        private bool accountExpand;
+
         public frmChef()
         {
             InitializeComponent();
+            btnSignOut.Click += btnSignOut_Click;
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -24,27 +23,23 @@ namespace C__Group_Assignment
 
         private void btnMaximize_Click(object sender, EventArgs e)
         {
-            Button seperateMaximize = (Button)sender;
+            Button maximizeButton = (Button)sender;
             if (WindowState == FormWindowState.Maximized)
             {
-                seperateMaximize.Image = Properties.Resources.Maximized_Icon_Resized;
+                maximizeButton.Image = Properties.Resources.Maximized_Icon_Resized;
                 WindowState = FormWindowState.Normal;
-                seperateMaximize.Name = "picMaximize";
             }
             else
             {
-                seperateMaximize.Image = Properties.Resources.Min_Icon_Resized;
+                maximizeButton.Image = Properties.Resources.Min_Icon_Resized;
                 WindowState = FormWindowState.Maximized;
-                seperateMaximize.Name = "picSeperate";
             }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
-
-        private Point mouseLocation;
 
         private void pnlTop_MouseDown(object sender, MouseEventArgs e)
         {
@@ -55,13 +50,11 @@ namespace C__Group_Assignment
         {
             if (e.Button == MouseButtons.Left)
             {
-                Point mousePose = Control.MousePosition;
-                mousePose.Offset(mouseLocation.X, mouseLocation.Y);
-                Location = mousePose;
+                Point mousePosition = Control.MousePosition;
+                mousePosition.Offset(mouseLocation.X, mouseLocation.Y);
+                Location = mousePosition;
             }
         }
-
-        bool sidebarExpand = true;
 
         private void transitionSidebar_Tick(object sender, EventArgs e)
         {
@@ -90,8 +83,6 @@ namespace C__Group_Assignment
             transitionSidebar.Start();
         }
 
-        bool accountExpand = false;
-
         private void dropdownAccount_Tick(object sender, EventArgs e)
         {
             if (!accountExpand)
@@ -113,21 +104,32 @@ namespace C__Group_Assignment
                 }
             }
         }
+
         private void btnAccount_Click(object sender, EventArgs e)
         {
             dropdownAccount.Start();
         }
 
-        public void loadform(object Form)
+        public void loadform(object formObject)
         {
-            if (this.pnlMain.Controls.Count > 0)
-                this.pnlMain.Controls.RemoveAt(0);
-            Form f = Form as Form;
-            f.TopLevel = false;
-            f.Dock = DockStyle.Fill;
-            this.pnlMain.Controls.Add(f);
-            this.pnlMain.Tag = f;
-            f.Show();
+            Form form = formObject as Form;
+            if (form == null)
+            {
+                throw new ArgumentException("Only Windows Forms can be loaded in the Chef workspace.", nameof(formObject));
+            }
+
+            while (pnlMain.Controls.Count > 0)
+            {
+                Control oldControl = pnlMain.Controls[0];
+                pnlMain.Controls.RemoveAt(0);
+                oldControl.Dispose();
+            }
+
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            pnlMain.Controls.Add(form);
+            pnlMain.Tag = form;
+            form.Show();
         }
 
         private void btnViewUpdateOrder_Click(object sender, EventArgs e)
@@ -148,6 +150,12 @@ namespace C__Group_Assignment
         private void btnSecurity_Click(object sender, EventArgs e)
         {
             loadform(new frmSecurity());
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            UserSession.Clear();
+            Close();
         }
     }
 }

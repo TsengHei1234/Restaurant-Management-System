@@ -47,7 +47,7 @@
             // 
             this.lblTable.AutoSize = true;
             this.lblTable.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTable.Location = new System.Drawing.Point(29, 23);
+            this.lblTable.Location = new System.Drawing.Point(28, 19);
             this.lblTable.Name = "lblTable";
             this.lblTable.Size = new System.Drawing.Size(59, 20);
             this.lblTable.TabIndex = 22;

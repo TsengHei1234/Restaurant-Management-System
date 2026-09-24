@@ -93,6 +93,7 @@
     <Compile Include="Customer\frmMenuFeedback.Designer.cs">
       <DependentUpon>frmMenuFeedback.cs</DependentUpon>
     </Compile>
+    <Compile Include="Chef\chef.cs" />
     <Compile Include="Chef\frmChef.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +105,12 @@
     </Compile>
     <Compile Include="Chef\frmManageInventory.Designer.cs">
       <DependentUpon>frmManageInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Chef\frmStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chef\frmStorage.Designer.cs">
+      <DependentUpon>frmStorage.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin\Admin.cs" />
     <Compile Include="Admin\frmAdmin.cs">
@@ -269,6 +276,9 @@
     </Compile>
     <EmbeddedResource Include="Chef\frmManageInventory.resx">
       <DependentUpon>frmManageInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chef\frmStorage.resx">
+      <DependentUpon>frmStorage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Chef\frmViewUpdateOrder.resx">
       <DependentUpon>frmViewUpdateOrder.cs</DependentUpon>
@@ -436,6 +446,8 @@
     <None Include="Resources\tempura.png" />
     <None Include="Resources\teriyaki_chicken.png" />
     <None Include="Resources\yakisoba.png" />
+    <None Include="Resources\chef bg3.png" />
+    <None Include="Resources\panel top1.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

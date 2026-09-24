@@ -58,6 +58,15 @@ IF NOT EXISTS (SELECT 1 FROM dbo.Storage WHERE StorageName = N'Dry Storage')
 
 IF NOT EXISTS (SELECT 1 FROM dbo.Storage WHERE StorageName = N'Cold Storage')
     INSERT dbo.Storage (StorageName, QuantityAvailable) VALUES (N'Cold Storage', 100);
+
+IF NOT EXISTS (SELECT 1 FROM dbo.Storage WHERE StorageName = N'Pasta')
+    INSERT dbo.Storage (StorageName, QuantityAvailable) VALUES (N'Pasta', 100);
+
+IF NOT EXISTS (SELECT 1 FROM dbo.Storage WHERE StorageName = N'Chicken')
+    INSERT dbo.Storage (StorageName, QuantityAvailable) VALUES (N'Chicken', 100);
+
+IF NOT EXISTS (SELECT 1 FROM dbo.Storage WHERE StorageName = N'Cheese')
+    INSERT dbo.Storage (StorageName, QuantityAvailable) VALUES (N'Cheese', 100);
 GO
 
 IF NOT EXISTS (SELECT 1 FROM dbo.FoodIngredients WHERE FoodID = N'F001' AND IngredientID = N'I001')
@@ -69,4 +78,3 @@ IF NOT EXISTS (SELECT 1 FROM dbo.FoodIngredients WHERE FoodID = N'F002' AND Ingr
 IF NOT EXISTS (SELECT 1 FROM dbo.FoodIngredients WHERE FoodID = N'F004' AND IngredientID = N'I003')
     INSERT dbo.FoodIngredients (FoodID, IngredientID, QuantityRequired) VALUES (N'F004', N'I003', 1);
 GO
-

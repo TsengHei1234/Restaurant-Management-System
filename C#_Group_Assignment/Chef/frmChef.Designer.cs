@@ -54,6 +54,7 @@
             this.pnlMain = new System.Windows.Forms.Panel();
             this.transitionSidebar = new System.Windows.Forms.Timer(this.components);
             this.dropdownAccount = new System.Windows.Forms.Timer(this.components);
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.pnlControlBox.SuspendLayout();
             this.pnlTop.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
@@ -72,7 +73,7 @@
             this.pnlControlBox.Controls.Add(this.btnExit);
             this.pnlControlBox.Controls.Add(this.btnMinimize);
             this.pnlControlBox.Controls.Add(this.btnMaximize);
-            this.pnlControlBox.Location = new System.Drawing.Point(796, -2);
+            this.pnlControlBox.Location = new System.Drawing.Point(973, -2);
             this.pnlControlBox.Name = "pnlControlBox";
             this.pnlControlBox.Size = new System.Drawing.Size(173, 41);
             this.pnlControlBox.TabIndex = 6;
@@ -137,7 +138,7 @@
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(973, 39);
+            this.pnlTop.Size = new System.Drawing.Size(1150, 39);
             this.pnlTop.TabIndex = 1;
             this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
             this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
@@ -181,7 +182,7 @@
             this.pnlSidebar.Location = new System.Drawing.Point(0, 39);
             this.pnlSidebar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(200, 589);
+            this.pnlSidebar.Size = new System.Drawing.Size(200, 711);
             this.pnlSidebar.TabIndex = 2;
             // 
             // pnlViewUpdateOrder
@@ -381,7 +382,7 @@
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMain.Location = new System.Drawing.Point(200, 39);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(773, 589);
+            this.pnlMain.Size = new System.Drawing.Size(950, 711);
             this.pnlMain.TabIndex = 3;
             // 
             // transitionSidebar
@@ -399,7 +400,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(973, 628);
+            this.ClientSize = new System.Drawing.Size(1150, 750);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlSidebar);
             this.Controls.Add(this.pnlTop);
@@ -448,5 +449,6 @@
         private System.Windows.Forms.Panel pnlSecurity;
         private System.Windows.Forms.Button btnSecurity;
         private System.Windows.Forms.Timer dropdownAccount;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
