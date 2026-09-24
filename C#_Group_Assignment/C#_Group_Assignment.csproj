@@ -105,6 +105,7 @@
     <Compile Include="Chef\frmManageInventory.Designer.cs">
       <DependentUpon>frmManageInventory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Admin.cs" />
     <Compile Include="Admin\frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>

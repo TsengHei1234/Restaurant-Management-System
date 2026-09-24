@@ -87,9 +87,10 @@
             this.pnlControlBox.Controls.Add(this.btnExit);
             this.pnlControlBox.Controls.Add(this.btnMinimize);
             this.pnlControlBox.Controls.Add(this.btnMaximize);
-            this.pnlControlBox.Location = new System.Drawing.Point(796, -2);
+            this.pnlControlBox.Location = new System.Drawing.Point(1061, -2);
+            this.pnlControlBox.Margin = new System.Windows.Forms.Padding(4);
             this.pnlControlBox.Name = "pnlControlBox";
-            this.pnlControlBox.Size = new System.Drawing.Size(173, 41);
+            this.pnlControlBox.Size = new System.Drawing.Size(231, 50);
             this.pnlControlBox.TabIndex = 6;
             // 
             // btnExit
@@ -102,9 +103,10 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.Transparent;
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.Location = new System.Drawing.Point(123, 5);
+            this.btnExit.Location = new System.Drawing.Point(164, 6);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(44, 32);
+            this.btnExit.Size = new System.Drawing.Size(59, 39);
             this.btnExit.TabIndex = 8;
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -119,9 +121,10 @@
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.ForeColor = System.Drawing.Color.Transparent;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(6, 5);
+            this.btnMinimize.Location = new System.Drawing.Point(8, 6);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(44, 32);
+            this.btnMinimize.Size = new System.Drawing.Size(59, 39);
             this.btnMinimize.TabIndex = 3;
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -136,9 +139,10 @@
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximize.ForeColor = System.Drawing.Color.Transparent;
             this.btnMaximize.Image = global::C__Group_Assignment.Properties.Resources.Maximized_Icon_Resized;
-            this.btnMaximize.Location = new System.Drawing.Point(65, 5);
+            this.btnMaximize.Location = new System.Drawing.Point(87, 6);
+            this.btnMaximize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(44, 32);
+            this.btnMaximize.Size = new System.Drawing.Size(59, 39);
             this.btnMaximize.TabIndex = 7;
             this.btnMaximize.UseVisualStyleBackColor = false;
             this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
@@ -151,8 +155,9 @@
             this.pnlTop.Controls.Add(this.label1);
             this.pnlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlTop.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(973, 39);
+            this.pnlTop.Size = new System.Drawing.Size(1297, 48);
             this.pnlTop.TabIndex = 1;
             this.pnlTop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseDown);
             this.pnlTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnlTop_MouseMove);
@@ -167,9 +172,10 @@
             this.btnSidebar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSidebar.ForeColor = System.Drawing.Color.Transparent;
             this.btnSidebar.Image = ((System.Drawing.Image)(resources.GetObject("btnSidebar.Image")));
-            this.btnSidebar.Location = new System.Drawing.Point(13, 4);
+            this.btnSidebar.Location = new System.Drawing.Point(17, 5);
+            this.btnSidebar.Margin = new System.Windows.Forms.Padding(4);
             this.btnSidebar.Name = "btnSidebar";
-            this.btnSidebar.Size = new System.Drawing.Size(44, 32);
+            this.btnSidebar.Size = new System.Drawing.Size(59, 39);
             this.btnSidebar.TabIndex = 0;
             this.btnSidebar.UseVisualStyleBackColor = false;
             this.btnSidebar.Click += new System.EventHandler(this.btnSidebar_Click);
@@ -178,27 +184,30 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.label1.Location = new System.Drawing.Point(73, 11);
+            this.label1.Location = new System.Drawing.Point(97, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 19);
+            this.label1.Size = new System.Drawing.Size(102, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Admin Page";
             // 
             // pnlMain
             // 
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(200, 39);
+            this.pnlMain.Location = new System.Drawing.Point(267, 48);
+            this.pnlMain.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(773, 589);
+            this.pnlMain.Size = new System.Drawing.Size(1030, 725);
             this.pnlMain.TabIndex = 4;
+            this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
             // 
             // pnlSignOut
             // 
             this.pnlSignOut.Controls.Add(this.btnSignOut);
-            this.pnlSignOut.Location = new System.Drawing.Point(0, 226);
+            this.pnlSignOut.Location = new System.Drawing.Point(0, 278);
             this.pnlSignOut.Margin = new System.Windows.Forms.Padding(0);
             this.pnlSignOut.Name = "pnlSignOut";
-            this.pnlSignOut.Size = new System.Drawing.Size(200, 57);
+            this.pnlSignOut.Size = new System.Drawing.Size(267, 70);
             this.pnlSignOut.TabIndex = 7;
             // 
             // btnSignOut
@@ -211,11 +220,11 @@
             this.btnSignOut.ForeColor = System.Drawing.Color.White;
             this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
             this.btnSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSignOut.Location = new System.Drawing.Point(-12, -19);
+            this.btnSignOut.Location = new System.Drawing.Point(-16, -23);
             this.btnSignOut.Margin = new System.Windows.Forms.Padding(0);
             this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnSignOut.Size = new System.Drawing.Size(235, 98);
+            this.btnSignOut.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnSignOut.Size = new System.Drawing.Size(313, 121);
             this.btnSignOut.TabIndex = 5;
             this.btnSignOut.Text = "            Sign Out";
             this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,10 +240,10 @@
             this.pnlSidebar.Controls.Add(this.containerAccount);
             this.pnlSidebar.Controls.Add(this.pnlSignOut);
             this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlSidebar.Location = new System.Drawing.Point(0, 39);
+            this.pnlSidebar.Location = new System.Drawing.Point(0, 48);
             this.pnlSidebar.Margin = new System.Windows.Forms.Padding(0);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(200, 589);
+            this.pnlSidebar.Size = new System.Drawing.Size(267, 725);
             this.pnlSidebar.TabIndex = 3;
             // 
             // containerManageUsers
@@ -248,7 +257,7 @@
             this.containerManageUsers.Location = new System.Drawing.Point(0, 0);
             this.containerManageUsers.Margin = new System.Windows.Forms.Padding(0);
             this.containerManageUsers.Name = "containerManageUsers";
-            this.containerManageUsers.Size = new System.Drawing.Size(200, 56);
+            this.containerManageUsers.Size = new System.Drawing.Size(267, 69);
             this.containerManageUsers.TabIndex = 8;
             // 
             // pnlReservation
@@ -257,7 +266,7 @@
             this.pnlReservation.Location = new System.Drawing.Point(0, 0);
             this.pnlReservation.Margin = new System.Windows.Forms.Padding(0);
             this.pnlReservation.Name = "pnlReservation";
-            this.pnlReservation.Size = new System.Drawing.Size(200, 57);
+            this.pnlReservation.Size = new System.Drawing.Size(267, 70);
             this.pnlReservation.TabIndex = 8;
             // 
             // btnManageUsers
@@ -270,11 +279,11 @@
             this.btnManageUsers.ForeColor = System.Drawing.Color.White;
             this.btnManageUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnManageUsers.Image")));
             this.btnManageUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageUsers.Location = new System.Drawing.Point(-12, -19);
+            this.btnManageUsers.Location = new System.Drawing.Point(-16, -23);
             this.btnManageUsers.Margin = new System.Windows.Forms.Padding(0);
             this.btnManageUsers.Name = "btnManageUsers";
-            this.btnManageUsers.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnManageUsers.Size = new System.Drawing.Size(246, 98);
+            this.btnManageUsers.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnManageUsers.Size = new System.Drawing.Size(328, 121);
             this.btnManageUsers.TabIndex = 5;
             this.btnManageUsers.Text = "            Manage Users";
             this.btnManageUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -284,10 +293,10 @@
             // pnlMakeReservation
             // 
             this.pnlMakeReservation.Controls.Add(this.btnManageManager);
-            this.pnlMakeReservation.Location = new System.Drawing.Point(0, 57);
+            this.pnlMakeReservation.Location = new System.Drawing.Point(0, 70);
             this.pnlMakeReservation.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMakeReservation.Name = "pnlMakeReservation";
-            this.pnlMakeReservation.Size = new System.Drawing.Size(200, 57);
+            this.pnlMakeReservation.Size = new System.Drawing.Size(267, 70);
             this.pnlMakeReservation.TabIndex = 9;
             // 
             // btnManageManager
@@ -300,11 +309,11 @@
             this.btnManageManager.ForeColor = System.Drawing.Color.White;
             this.btnManageManager.Image = ((System.Drawing.Image)(resources.GetObject("btnManageManager.Image")));
             this.btnManageManager.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageManager.Location = new System.Drawing.Point(-12, -19);
+            this.btnManageManager.Location = new System.Drawing.Point(-16, -23);
             this.btnManageManager.Margin = new System.Windows.Forms.Padding(0);
             this.btnManageManager.Name = "btnManageManager";
-            this.btnManageManager.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnManageManager.Size = new System.Drawing.Size(235, 98);
+            this.btnManageManager.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnManageManager.Size = new System.Drawing.Size(313, 121);
             this.btnManageManager.TabIndex = 5;
             this.btnManageManager.Text = "            Manage Manager";
             this.btnManageManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -314,10 +323,10 @@
             // pnlReservationStatus
             // 
             this.pnlReservationStatus.Controls.Add(this.btnManageChef);
-            this.pnlReservationStatus.Location = new System.Drawing.Point(0, 114);
+            this.pnlReservationStatus.Location = new System.Drawing.Point(0, 140);
             this.pnlReservationStatus.Margin = new System.Windows.Forms.Padding(0);
             this.pnlReservationStatus.Name = "pnlReservationStatus";
-            this.pnlReservationStatus.Size = new System.Drawing.Size(200, 57);
+            this.pnlReservationStatus.Size = new System.Drawing.Size(267, 70);
             this.pnlReservationStatus.TabIndex = 10;
             // 
             // btnManageChef
@@ -330,11 +339,11 @@
             this.btnManageChef.ForeColor = System.Drawing.Color.White;
             this.btnManageChef.Image = ((System.Drawing.Image)(resources.GetObject("btnManageChef.Image")));
             this.btnManageChef.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageChef.Location = new System.Drawing.Point(-12, -19);
+            this.btnManageChef.Location = new System.Drawing.Point(-16, -23);
             this.btnManageChef.Margin = new System.Windows.Forms.Padding(0);
             this.btnManageChef.Name = "btnManageChef";
-            this.btnManageChef.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnManageChef.Size = new System.Drawing.Size(235, 98);
+            this.btnManageChef.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnManageChef.Size = new System.Drawing.Size(313, 121);
             this.btnManageChef.TabIndex = 5;
             this.btnManageChef.Text = "            Manage Chef";
             this.btnManageChef.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -344,10 +353,10 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnManageCustomer);
-            this.panel1.Location = new System.Drawing.Point(0, 171);
+            this.panel1.Location = new System.Drawing.Point(0, 210);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 57);
+            this.panel1.Size = new System.Drawing.Size(267, 70);
             this.panel1.TabIndex = 11;
             // 
             // btnManageCustomer
@@ -360,11 +369,11 @@
             this.btnManageCustomer.ForeColor = System.Drawing.Color.White;
             this.btnManageCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnManageCustomer.Image")));
             this.btnManageCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnManageCustomer.Location = new System.Drawing.Point(-12, -19);
+            this.btnManageCustomer.Location = new System.Drawing.Point(-16, -23);
             this.btnManageCustomer.Margin = new System.Windows.Forms.Padding(0);
             this.btnManageCustomer.Name = "btnManageCustomer";
-            this.btnManageCustomer.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnManageCustomer.Size = new System.Drawing.Size(235, 98);
+            this.btnManageCustomer.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnManageCustomer.Size = new System.Drawing.Size(313, 121);
             this.btnManageCustomer.TabIndex = 5;
             this.btnManageCustomer.Text = "            Manage Customer";
             this.btnManageCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -374,10 +383,10 @@
             // pnlViewSalesReport
             // 
             this.pnlViewSalesReport.Controls.Add(this.btnViewSalesReport);
-            this.pnlViewSalesReport.Location = new System.Drawing.Point(0, 56);
+            this.pnlViewSalesReport.Location = new System.Drawing.Point(0, 69);
             this.pnlViewSalesReport.Margin = new System.Windows.Forms.Padding(0);
             this.pnlViewSalesReport.Name = "pnlViewSalesReport";
-            this.pnlViewSalesReport.Size = new System.Drawing.Size(200, 57);
+            this.pnlViewSalesReport.Size = new System.Drawing.Size(267, 70);
             this.pnlViewSalesReport.TabIndex = 7;
             // 
             // btnViewSalesReport
@@ -390,23 +399,24 @@
             this.btnViewSalesReport.ForeColor = System.Drawing.Color.White;
             this.btnViewSalesReport.Image = ((System.Drawing.Image)(resources.GetObject("btnViewSalesReport.Image")));
             this.btnViewSalesReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewSalesReport.Location = new System.Drawing.Point(-12, -19);
+            this.btnViewSalesReport.Location = new System.Drawing.Point(-16, -23);
             this.btnViewSalesReport.Margin = new System.Windows.Forms.Padding(0);
             this.btnViewSalesReport.Name = "btnViewSalesReport";
-            this.btnViewSalesReport.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnViewSalesReport.Size = new System.Drawing.Size(235, 98);
+            this.btnViewSalesReport.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnViewSalesReport.Size = new System.Drawing.Size(313, 121);
             this.btnViewSalesReport.TabIndex = 5;
             this.btnViewSalesReport.Text = "            View Sales Report";
             this.btnViewSalesReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnViewSalesReport.UseVisualStyleBackColor = false;
+            this.btnViewSalesReport.Click += new System.EventHandler(this.btnViewSalesReport_Click);
             // 
             // pnlViewFeedback
             // 
             this.pnlViewFeedback.Controls.Add(this.btnViewFeedback);
-            this.pnlViewFeedback.Location = new System.Drawing.Point(0, 113);
+            this.pnlViewFeedback.Location = new System.Drawing.Point(0, 139);
             this.pnlViewFeedback.Margin = new System.Windows.Forms.Padding(0);
             this.pnlViewFeedback.Name = "pnlViewFeedback";
-            this.pnlViewFeedback.Size = new System.Drawing.Size(200, 57);
+            this.pnlViewFeedback.Size = new System.Drawing.Size(267, 70);
             this.pnlViewFeedback.TabIndex = 6;
             // 
             // btnViewFeedback
@@ -419,11 +429,11 @@
             this.btnViewFeedback.ForeColor = System.Drawing.Color.White;
             this.btnViewFeedback.Image = ((System.Drawing.Image)(resources.GetObject("btnViewFeedback.Image")));
             this.btnViewFeedback.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnViewFeedback.Location = new System.Drawing.Point(-12, -19);
+            this.btnViewFeedback.Location = new System.Drawing.Point(-16, -23);
             this.btnViewFeedback.Margin = new System.Windows.Forms.Padding(0);
             this.btnViewFeedback.Name = "btnViewFeedback";
-            this.btnViewFeedback.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnViewFeedback.Size = new System.Drawing.Size(235, 98);
+            this.btnViewFeedback.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnViewFeedback.Size = new System.Drawing.Size(313, 121);
             this.btnViewFeedback.TabIndex = 5;
             this.btnViewFeedback.Text = "            View Feedback";
             this.btnViewFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -437,10 +447,10 @@
             this.containerAccount.Controls.Add(this.pnlPersonalInfo);
             this.containerAccount.Controls.Add(this.pnlSecurity);
             this.containerAccount.ForeColor = System.Drawing.Color.White;
-            this.containerAccount.Location = new System.Drawing.Point(0, 170);
+            this.containerAccount.Location = new System.Drawing.Point(0, 209);
             this.containerAccount.Margin = new System.Windows.Forms.Padding(0);
             this.containerAccount.Name = "containerAccount";
-            this.containerAccount.Size = new System.Drawing.Size(200, 56);
+            this.containerAccount.Size = new System.Drawing.Size(267, 69);
             this.containerAccount.TabIndex = 12;
             // 
             // pnlAccount
@@ -449,7 +459,7 @@
             this.pnlAccount.Location = new System.Drawing.Point(0, 0);
             this.pnlAccount.Margin = new System.Windows.Forms.Padding(0);
             this.pnlAccount.Name = "pnlAccount";
-            this.pnlAccount.Size = new System.Drawing.Size(200, 57);
+            this.pnlAccount.Size = new System.Drawing.Size(267, 70);
             this.pnlAccount.TabIndex = 8;
             // 
             // btnAccount
@@ -462,11 +472,11 @@
             this.btnAccount.ForeColor = System.Drawing.Color.White;
             this.btnAccount.Image = ((System.Drawing.Image)(resources.GetObject("btnAccount.Image")));
             this.btnAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAccount.Location = new System.Drawing.Point(-12, -19);
+            this.btnAccount.Location = new System.Drawing.Point(-16, -23);
             this.btnAccount.Margin = new System.Windows.Forms.Padding(0);
             this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnAccount.Size = new System.Drawing.Size(246, 98);
+            this.btnAccount.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnAccount.Size = new System.Drawing.Size(328, 121);
             this.btnAccount.TabIndex = 5;
             this.btnAccount.Text = "            Account";
             this.btnAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -476,10 +486,10 @@
             // pnlPersonalInfo
             // 
             this.pnlPersonalInfo.Controls.Add(this.btnPersonalInfo);
-            this.pnlPersonalInfo.Location = new System.Drawing.Point(0, 57);
+            this.pnlPersonalInfo.Location = new System.Drawing.Point(0, 70);
             this.pnlPersonalInfo.Margin = new System.Windows.Forms.Padding(0);
             this.pnlPersonalInfo.Name = "pnlPersonalInfo";
-            this.pnlPersonalInfo.Size = new System.Drawing.Size(200, 57);
+            this.pnlPersonalInfo.Size = new System.Drawing.Size(267, 70);
             this.pnlPersonalInfo.TabIndex = 9;
             // 
             // btnPersonalInfo
@@ -492,11 +502,11 @@
             this.btnPersonalInfo.ForeColor = System.Drawing.Color.White;
             this.btnPersonalInfo.Image = ((System.Drawing.Image)(resources.GetObject("btnPersonalInfo.Image")));
             this.btnPersonalInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonalInfo.Location = new System.Drawing.Point(-12, -19);
+            this.btnPersonalInfo.Location = new System.Drawing.Point(-16, -23);
             this.btnPersonalInfo.Margin = new System.Windows.Forms.Padding(0);
             this.btnPersonalInfo.Name = "btnPersonalInfo";
-            this.btnPersonalInfo.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnPersonalInfo.Size = new System.Drawing.Size(235, 98);
+            this.btnPersonalInfo.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnPersonalInfo.Size = new System.Drawing.Size(313, 121);
             this.btnPersonalInfo.TabIndex = 5;
             this.btnPersonalInfo.Text = "            Personal Info";
             this.btnPersonalInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -506,10 +516,10 @@
             // pnlSecurity
             // 
             this.pnlSecurity.Controls.Add(this.btnSecurity);
-            this.pnlSecurity.Location = new System.Drawing.Point(0, 114);
+            this.pnlSecurity.Location = new System.Drawing.Point(0, 140);
             this.pnlSecurity.Margin = new System.Windows.Forms.Padding(0);
             this.pnlSecurity.Name = "pnlSecurity";
-            this.pnlSecurity.Size = new System.Drawing.Size(200, 57);
+            this.pnlSecurity.Size = new System.Drawing.Size(267, 70);
             this.pnlSecurity.TabIndex = 10;
             // 
             // btnSecurity
@@ -522,11 +532,11 @@
             this.btnSecurity.ForeColor = System.Drawing.Color.White;
             this.btnSecurity.Image = ((System.Drawing.Image)(resources.GetObject("btnSecurity.Image")));
             this.btnSecurity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSecurity.Location = new System.Drawing.Point(-12, -19);
+            this.btnSecurity.Location = new System.Drawing.Point(-16, -23);
             this.btnSecurity.Margin = new System.Windows.Forms.Padding(0);
             this.btnSecurity.Name = "btnSecurity";
-            this.btnSecurity.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnSecurity.Size = new System.Drawing.Size(235, 98);
+            this.btnSecurity.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.btnSecurity.Size = new System.Drawing.Size(313, 121);
             this.btnSecurity.TabIndex = 5;
             this.btnSecurity.Text = "            Security";
             this.btnSecurity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -550,17 +560,17 @@
             // 
             // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 628);
+            this.ClientSize = new System.Drawing.Size(1297, 773);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlSidebar);
             this.Controls.Add(this.pnlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAdmin";
+            this.Text = " ";
             this.pnlControlBox.ResumeLayout(false);
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
