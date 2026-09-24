@@ -92,7 +92,7 @@ namespace C__Group_Assignment
 
         private Image GetImageFromResources(string imageName)
         {
-            return (Image)Properties.Resources.ResourceManager.GetObject(imageName);
+            return MenuImageStore.Load(imageName);
         }
 
         public void UpdateMaximumOrder()    //numericUpDown limit for each ucOrder, check ingredients

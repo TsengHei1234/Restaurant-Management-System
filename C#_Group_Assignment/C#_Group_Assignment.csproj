@@ -176,6 +176,8 @@
     <Compile Include="SetDateTime.cs" />
     <Compile Include="UserLogin.cs" />
     <Compile Include="UserSession.cs" />
+    <Compile Include="MenuImageStore.cs" />
+    <Compile Include="Manager\ManagerService.cs" />
     <Compile Include="Manager\frmSaleReports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -448,6 +450,11 @@
     <None Include="Resources\yakisoba.png" />
     <None Include="Resources\chef bg3.png" />
     <None Include="Resources\panel top1.png" />
+    <None Include="Resources\caution-danger-sign-free-vector-removebg-preview1.png" />
+    <None Include="Resources\Gathering-with-Family.jpg" />
+    <None Include="Resources\Grduation-Party.jpg" />
+    <None Include="Resources\iStock-918933880.jpg" />
+    <None Include="Resources\R.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

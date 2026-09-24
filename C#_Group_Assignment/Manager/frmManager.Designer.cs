@@ -38,10 +38,6 @@
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximize = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.pnlReservations = new System.Windows.Forms.Panel();
-            this.btnReservations = new System.Windows.Forms.Button();
-            this.pnlSignOut = new System.Windows.Forms.Panel();
-            this.btnSignOut = new System.Windows.Forms.Button();
             this.containerInventory = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlReservation = new System.Windows.Forms.Panel();
             this.btnInventory = new System.Windows.Forms.Button();
@@ -49,6 +45,12 @@
             this.btnAddMenuItem = new System.Windows.Forms.Button();
             this.pnlReservationStatus = new System.Windows.Forms.Panel();
             this.btnEditItems = new System.Windows.Forms.Button();
+            this.pnlReservations = new System.Windows.Forms.Panel();
+            this.btnReservations = new System.Windows.Forms.Button();
+            this.pnlSignOut = new System.Windows.Forms.Panel();
+            this.btnSignOut = new System.Windows.Forms.Button();
+            this.pnlReservationFeedback = new System.Windows.Forms.Panel();
+            this.btnReservationsReports = new System.Windows.Forms.Button();
             this.containerAccount = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlAccount = new System.Windows.Forms.Panel();
             this.btnAccount = new System.Windows.Forms.Button();
@@ -56,34 +58,23 @@
             this.btnPersonalInfo = new System.Windows.Forms.Button();
             this.pnlSecurity = new System.Windows.Forms.Panel();
             this.btnSecurity = new System.Windows.Forms.Button();
-            this.containerReports = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnlSendFeedback = new System.Windows.Forms.Panel();
-            this.btnReports = new System.Windows.Forms.Button();
-            this.pnlReservationFeedback = new System.Windows.Forms.Panel();
-            this.btnReservationsReports = new System.Windows.Forms.Button();
-            this.pnlMenuFeedback = new System.Windows.Forms.Panel();
-            this.btnSaleReports = new System.Windows.Forms.Button();
             this.pnlSidebar = new System.Windows.Forms.FlowLayoutPanel();
-            this.dropdownReports = new System.Windows.Forms.Timer(this.components);
             this.dropdownAccount = new System.Windows.Forms.Timer(this.components);
             this.transitionSidebar = new System.Windows.Forms.Timer(this.components);
             this.dropdownInventory = new System.Windows.Forms.Timer(this.components);
             this.pnlTop.SuspendLayout();
             this.pnlControlBox.SuspendLayout();
-            this.pnlReservations.SuspendLayout();
-            this.pnlSignOut.SuspendLayout();
             this.containerInventory.SuspendLayout();
             this.pnlReservation.SuspendLayout();
             this.pnlMakeReservation.SuspendLayout();
             this.pnlReservationStatus.SuspendLayout();
+            this.pnlReservations.SuspendLayout();
+            this.pnlSignOut.SuspendLayout();
+            this.pnlReservationFeedback.SuspendLayout();
             this.containerAccount.SuspendLayout();
             this.pnlAccount.SuspendLayout();
             this.pnlPersonalInfo.SuspendLayout();
             this.pnlSecurity.SuspendLayout();
-            this.containerReports.SuspendLayout();
-            this.pnlSendFeedback.SuspendLayout();
-            this.pnlReservationFeedback.SuspendLayout();
-            this.pnlMenuFeedback.SuspendLayout();
             this.pnlSidebar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -198,65 +189,6 @@
             this.pnlMain.Size = new System.Drawing.Size(756, 589);
             this.pnlMain.TabIndex = 4;
             // 
-            // pnlReservations
-            // 
-            this.pnlReservations.Controls.Add(this.btnReservations);
-            this.pnlReservations.Location = new System.Drawing.Point(0, 56);
-            this.pnlReservations.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlReservations.Name = "pnlReservations";
-            this.pnlReservations.Size = new System.Drawing.Size(217, 57);
-            this.pnlReservations.TabIndex = 6;
-            // 
-            // btnReservations
-            // 
-            this.btnReservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
-            this.btnReservations.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(202)))));
-            this.btnReservations.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnReservations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReservations.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReservations.ForeColor = System.Drawing.Color.White;
-            this.btnReservations.Image = ((System.Drawing.Image)(resources.GetObject("btnReservations.Image")));
-            this.btnReservations.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReservations.Location = new System.Drawing.Point(-12, -19);
-            this.btnReservations.Margin = new System.Windows.Forms.Padding(0);
-            this.btnReservations.Name = "btnReservations";
-            this.btnReservations.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnReservations.Size = new System.Drawing.Size(235, 98);
-            this.btnReservations.TabIndex = 5;
-            this.btnReservations.Text = "            Reservations";
-            this.btnReservations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReservations.UseVisualStyleBackColor = false;
-            this.btnReservations.Click += new System.EventHandler(this.btnReservations_Click);
-            // 
-            // pnlSignOut
-            // 
-            this.pnlSignOut.Controls.Add(this.btnSignOut);
-            this.pnlSignOut.Location = new System.Drawing.Point(0, 225);
-            this.pnlSignOut.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlSignOut.Name = "pnlSignOut";
-            this.pnlSignOut.Size = new System.Drawing.Size(217, 57);
-            this.pnlSignOut.TabIndex = 7;
-            // 
-            // btnSignOut
-            // 
-            this.btnSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
-            this.btnSignOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(202)))));
-            this.btnSignOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignOut.ForeColor = System.Drawing.Color.White;
-            this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
-            this.btnSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSignOut.Location = new System.Drawing.Point(-12, -19);
-            this.btnSignOut.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnSignOut.Size = new System.Drawing.Size(235, 98);
-            this.btnSignOut.TabIndex = 5;
-            this.btnSignOut.Text = "            Sign Out";
-            this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSignOut.UseVisualStyleBackColor = false;
-            // 
             // containerInventory
             // 
             this.containerInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(176)))), ((int)(((byte)(170)))));
@@ -360,6 +292,95 @@
             this.btnEditItems.UseVisualStyleBackColor = false;
             this.btnEditItems.Click += new System.EventHandler(this.btnEditItems_Click);
             // 
+            // pnlReservations
+            // 
+            this.pnlReservations.Controls.Add(this.btnReservations);
+            this.pnlReservations.Location = new System.Drawing.Point(0, 56);
+            this.pnlReservations.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlReservations.Name = "pnlReservations";
+            this.pnlReservations.Size = new System.Drawing.Size(217, 57);
+            this.pnlReservations.TabIndex = 6;
+            // 
+            // btnReservations
+            // 
+            this.btnReservations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
+            this.btnReservations.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(202)))));
+            this.btnReservations.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnReservations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservations.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservations.ForeColor = System.Drawing.Color.White;
+            this.btnReservations.Image = ((System.Drawing.Image)(resources.GetObject("btnReservations.Image")));
+            this.btnReservations.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservations.Location = new System.Drawing.Point(-12, -19);
+            this.btnReservations.Margin = new System.Windows.Forms.Padding(0);
+            this.btnReservations.Name = "btnReservations";
+            this.btnReservations.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnReservations.Size = new System.Drawing.Size(235, 98);
+            this.btnReservations.TabIndex = 5;
+            this.btnReservations.Text = "            Reservations";
+            this.btnReservations.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservations.UseVisualStyleBackColor = false;
+            this.btnReservations.Click += new System.EventHandler(this.btnReservations_Click);
+            // 
+            // pnlSignOut
+            // 
+            this.pnlSignOut.Controls.Add(this.btnSignOut);
+            this.pnlSignOut.Location = new System.Drawing.Point(0, 226);
+            this.pnlSignOut.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlSignOut.Name = "pnlSignOut";
+            this.pnlSignOut.Size = new System.Drawing.Size(217, 57);
+            this.pnlSignOut.TabIndex = 7;
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
+            this.btnSignOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(202)))));
+            this.btnSignOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.ForeColor = System.Drawing.Color.White;
+            this.btnSignOut.Image = ((System.Drawing.Image)(resources.GetObject("btnSignOut.Image")));
+            this.btnSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSignOut.Location = new System.Drawing.Point(-12, -19);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnSignOut.Size = new System.Drawing.Size(235, 98);
+            this.btnSignOut.TabIndex = 5;
+            this.btnSignOut.Text = "            Sign Out";
+            this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSignOut.UseVisualStyleBackColor = false;
+            // 
+            // pnlReservationFeedback
+            // 
+            this.pnlReservationFeedback.Controls.Add(this.btnReservationsReports);
+            this.pnlReservationFeedback.Location = new System.Drawing.Point(0, 113);
+            this.pnlReservationFeedback.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlReservationFeedback.Name = "pnlReservationFeedback";
+            this.pnlReservationFeedback.Size = new System.Drawing.Size(217, 57);
+            this.pnlReservationFeedback.TabIndex = 10;
+            // 
+            // btnReservationsReports
+            // 
+            this.btnReservationsReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
+            this.btnReservationsReports.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(202)))));
+            this.btnReservationsReports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.btnReservationsReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReservationsReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservationsReports.ForeColor = System.Drawing.Color.White;
+            this.btnReservationsReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReservationsReports.Image")));
+            this.btnReservationsReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservationsReports.Location = new System.Drawing.Point(-12, -19);
+            this.btnReservationsReports.Margin = new System.Windows.Forms.Padding(0);
+            this.btnReservationsReports.Name = "btnReservationsReports";
+            this.btnReservationsReports.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnReservationsReports.Size = new System.Drawing.Size(235, 98);
+            this.btnReservationsReports.TabIndex = 5;
+            this.btnReservationsReports.Text = "            Reservations Reports";
+            this.btnReservationsReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReservationsReports.UseVisualStyleBackColor = false;
+            this.btnReservationsReports.Click += new System.EventHandler(this.btnReservationsReports_Click);
+            // 
             // containerAccount
             // 
             this.containerAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(176)))), ((int)(((byte)(170)))));
@@ -367,7 +388,7 @@
             this.containerAccount.Controls.Add(this.pnlPersonalInfo);
             this.containerAccount.Controls.Add(this.pnlSecurity);
             this.containerAccount.ForeColor = System.Drawing.Color.White;
-            this.containerAccount.Location = new System.Drawing.Point(0, 169);
+            this.containerAccount.Location = new System.Drawing.Point(0, 170);
             this.containerAccount.Margin = new System.Windows.Forms.Padding(0);
             this.containerAccount.Name = "containerAccount";
             this.containerAccount.Size = new System.Drawing.Size(217, 56);
@@ -463,116 +484,13 @@
             this.btnSecurity.UseVisualStyleBackColor = false;
             this.btnSecurity.Click += new System.EventHandler(this.btnSecurity_Click);
             // 
-            // containerReports
-            // 
-            this.containerReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(176)))), ((int)(((byte)(170)))));
-            this.containerReports.Controls.Add(this.pnlSendFeedback);
-            this.containerReports.Controls.Add(this.pnlReservationFeedback);
-            this.containerReports.Controls.Add(this.pnlMenuFeedback);
-            this.containerReports.ForeColor = System.Drawing.Color.White;
-            this.containerReports.Location = new System.Drawing.Point(0, 113);
-            this.containerReports.Margin = new System.Windows.Forms.Padding(0);
-            this.containerReports.Name = "containerReports";
-            this.containerReports.Size = new System.Drawing.Size(217, 56);
-            this.containerReports.TabIndex = 11;
-            // 
-            // pnlSendFeedback
-            // 
-            this.pnlSendFeedback.Controls.Add(this.btnReports);
-            this.pnlSendFeedback.Location = new System.Drawing.Point(0, 0);
-            this.pnlSendFeedback.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlSendFeedback.Name = "pnlSendFeedback";
-            this.pnlSendFeedback.Size = new System.Drawing.Size(217, 57);
-            this.pnlSendFeedback.TabIndex = 8;
-            // 
-            // btnReports
-            // 
-            this.btnReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
-            this.btnReports.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(202)))));
-            this.btnReports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.ForeColor = System.Drawing.Color.White;
-            this.btnReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReports.Image")));
-            this.btnReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.Location = new System.Drawing.Point(-12, -19);
-            this.btnReports.Margin = new System.Windows.Forms.Padding(0);
-            this.btnReports.Name = "btnReports";
-            this.btnReports.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnReports.Size = new System.Drawing.Size(246, 98);
-            this.btnReports.TabIndex = 5;
-            this.btnReports.Text = "            Reports and Analytics";
-            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReports.UseVisualStyleBackColor = false;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
-            // 
-            // pnlReservationFeedback
-            // 
-            this.pnlReservationFeedback.Controls.Add(this.btnReservationsReports);
-            this.pnlReservationFeedback.Location = new System.Drawing.Point(0, 57);
-            this.pnlReservationFeedback.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlReservationFeedback.Name = "pnlReservationFeedback";
-            this.pnlReservationFeedback.Size = new System.Drawing.Size(217, 57);
-            this.pnlReservationFeedback.TabIndex = 10;
-            // 
-            // btnReservationsReports
-            // 
-            this.btnReservationsReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(176)))), ((int)(((byte)(170)))));
-            this.btnReservationsReports.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(202)))));
-            this.btnReservationsReports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnReservationsReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReservationsReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReservationsReports.ForeColor = System.Drawing.Color.White;
-            this.btnReservationsReports.Image = ((System.Drawing.Image)(resources.GetObject("btnReservationsReports.Image")));
-            this.btnReservationsReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReservationsReports.Location = new System.Drawing.Point(-12, -19);
-            this.btnReservationsReports.Margin = new System.Windows.Forms.Padding(0);
-            this.btnReservationsReports.Name = "btnReservationsReports";
-            this.btnReservationsReports.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnReservationsReports.Size = new System.Drawing.Size(235, 98);
-            this.btnReservationsReports.TabIndex = 5;
-            this.btnReservationsReports.Text = "            Reservations Reports";
-            this.btnReservationsReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReservationsReports.UseVisualStyleBackColor = false;
-            this.btnReservationsReports.Click += new System.EventHandler(this.btnReservationsReports_Click);
-            // 
-            // pnlMenuFeedback
-            // 
-            this.pnlMenuFeedback.Controls.Add(this.btnSaleReports);
-            this.pnlMenuFeedback.Location = new System.Drawing.Point(0, 114);
-            this.pnlMenuFeedback.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlMenuFeedback.Name = "pnlMenuFeedback";
-            this.pnlMenuFeedback.Size = new System.Drawing.Size(217, 57);
-            this.pnlMenuFeedback.TabIndex = 9;
-            // 
-            // btnSaleReports
-            // 
-            this.btnSaleReports.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(176)))), ((int)(((byte)(170)))));
-            this.btnSaleReports.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(255)))), ((int)(((byte)(202)))));
-            this.btnSaleReports.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnSaleReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaleReports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaleReports.ForeColor = System.Drawing.Color.White;
-            this.btnSaleReports.Image = ((System.Drawing.Image)(resources.GetObject("btnSaleReports.Image")));
-            this.btnSaleReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaleReports.Location = new System.Drawing.Point(-12, -19);
-            this.btnSaleReports.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSaleReports.Name = "btnSaleReports";
-            this.btnSaleReports.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnSaleReports.Size = new System.Drawing.Size(235, 98);
-            this.btnSaleReports.TabIndex = 5;
-            this.btnSaleReports.Text = "            Sales Reports";
-            this.btnSaleReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaleReports.UseVisualStyleBackColor = false;
-            this.btnSaleReports.Click += new System.EventHandler(this.btnSaleReports_Click);
-            // 
             // pnlSidebar
             // 
             this.pnlSidebar.AutoScroll = true;
             this.pnlSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(134)))), ((int)(((byte)(156)))));
             this.pnlSidebar.Controls.Add(this.containerInventory);
             this.pnlSidebar.Controls.Add(this.pnlReservations);
-            this.pnlSidebar.Controls.Add(this.containerReports);
+            this.pnlSidebar.Controls.Add(this.pnlReservationFeedback);
             this.pnlSidebar.Controls.Add(this.containerAccount);
             this.pnlSidebar.Controls.Add(this.pnlSignOut);
             this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
@@ -581,11 +499,6 @@
             this.pnlSidebar.Name = "pnlSidebar";
             this.pnlSidebar.Size = new System.Drawing.Size(217, 589);
             this.pnlSidebar.TabIndex = 3;
-            // 
-            // dropdownReports
-            // 
-            this.dropdownReports.Interval = 10;
-            this.dropdownReports.Tick += new System.EventHandler(this.dropdownReports_Tick);
             // 
             // dropdownAccount
             // 
@@ -618,20 +531,17 @@
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             this.pnlControlBox.ResumeLayout(false);
-            this.pnlReservations.ResumeLayout(false);
-            this.pnlSignOut.ResumeLayout(false);
             this.containerInventory.ResumeLayout(false);
             this.pnlReservation.ResumeLayout(false);
             this.pnlMakeReservation.ResumeLayout(false);
             this.pnlReservationStatus.ResumeLayout(false);
+            this.pnlReservations.ResumeLayout(false);
+            this.pnlSignOut.ResumeLayout(false);
+            this.pnlReservationFeedback.ResumeLayout(false);
             this.containerAccount.ResumeLayout(false);
             this.pnlAccount.ResumeLayout(false);
             this.pnlPersonalInfo.ResumeLayout(false);
             this.pnlSecurity.ResumeLayout(false);
-            this.containerReports.ResumeLayout(false);
-            this.pnlSendFeedback.ResumeLayout(false);
-            this.pnlReservationFeedback.ResumeLayout(false);
-            this.pnlMenuFeedback.ResumeLayout(false);
             this.pnlSidebar.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -665,15 +575,9 @@
         private System.Windows.Forms.Button btnPersonalInfo;
         private System.Windows.Forms.Panel pnlSecurity;
         private System.Windows.Forms.Button btnSecurity;
-        private System.Windows.Forms.FlowLayoutPanel containerReports;
-        private System.Windows.Forms.Panel pnlSendFeedback;
-        private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Panel pnlReservationFeedback;
         private System.Windows.Forms.Button btnReservationsReports;
-        private System.Windows.Forms.Panel pnlMenuFeedback;
-        private System.Windows.Forms.Button btnSaleReports;
         private System.Windows.Forms.FlowLayoutPanel pnlSidebar;
-        private System.Windows.Forms.Timer dropdownReports;
         private System.Windows.Forms.Timer dropdownAccount;
         private System.Windows.Forms.Timer transitionSidebar;
         private System.Windows.Forms.Timer dropdownInventory;

@@ -379,5 +379,40 @@ namespace C__Group_Assignment.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        internal static System.Drawing.Bitmap caution_danger_sign_free_vector_removebg_preview1 {
+            get {
+                object obj = ResourceManager.GetObject("caution-danger-sign-free-vector-removebg-preview1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap Gathering_with_Family {
+            get {
+                object obj = ResourceManager.GetObject("Gathering-with-Family", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap Grduation_Party {
+            get {
+                object obj = ResourceManager.GetObject("Grduation-Party", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap iStock_918933880 {
+            get {
+                object obj = ResourceManager.GetObject("iStock-918933880", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+
+        internal static System.Drawing.Bitmap R {
+            get {
+                object obj = ResourceManager.GetObject("R", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
